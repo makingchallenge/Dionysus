@@ -54,8 +54,45 @@
         <div class="section4_box">
             <div class="section4_wine_tip">
                 <p class="section4_comma"><img src="images/따음표.png"/></p>
+                <!--
+                    1. 이미지명은 영문으로 하는게 좋아요
+                    국문으로 했을 때 이미지 읽어올 때 읽어오지 못하는 경우도 있어요.
+                    
+                    2. 이렇게 디자인 적인 이미지를 추가시 background-img 속성을 사용하는 방법도 있어요 (이런 방법도 있다~ 라는 식으로 참고용으로 보세요ㅎㅎ)
+                    참고
+                    yuna 브랜치 > index.html > ctrl + f > 예시 1 검색
+                               > default.html > ctrl + f > 예시 1 검색
+                -->
                 <p class="section4_tip_txt1 NanumSquare"> 어렵지 않게 알 수 있는 와인 상식과 어울리는 음식</p>
+                <!--
+                    default.css 파일에 NanumSquare class 가 없어서 아무런 css를 주지 못하고 있어요
+                    naumsquare font 같은 경우 html,body(css파일 35번째줄)에 font-family:'NanumSquare', sans-serif;로 이미 주고 있어서 따로 정해주지 않아도 괜찮아요
+                -->
                 <p class="section4_tip_txt2 lottemartdream">쉽게 알아보는 <a class="section4_tip_red">Wine Tip</a></p>
+                <!--
+                    이렇게 포인트를 줄 경우에는 span tag를 사용하는게 좋아요
+                    span tag
+                    <span></span> 태그는 <div></div> 태그처럼 특별한 기능을 갖고있지 않고, CSS에 속성을 줘서 사용해요
+                    <div> 태그와의 차이점은 display속성이 block이 아닌, inline이라는 점
+                    이 둘의 차이를 쉽게 설명하자면, <div>는 줄 바꿈이 되지만, <span>은 줄 바꿈이 되지 않다는 점이예요
+                    
+                    a tag
+                    a 태그는 하이퍼링크를 걸어주는 태그예요
+
+                    a tag 속성
+                        href: 클릭시 이동 할 링크
+                        target: 링크를 여는 방법
+                        _self: 현재 페이지 (기본값)
+                        _blank: 새 탭
+                        _parent: 부모 페이지로, iframe 등이 사용된 환경에서 사용
+                        _top: 최상위 페이지로, iframe 등이 사용된 환경에서 사용
+                        프레임이름: 직접 프레임이름을 명시해서 사용
+                    
+                    a tag 속성 사용 예시
+                    <a href="www.naver.com" target="_blank">네이버</a>
+
+                    a tag 그대로 사용시 웹표준에 맞지 않아서 웹표준 검사에 오류1로 걸려요~
+                -->
             </div>
             <div class="section4_img-box">
                 <div>
@@ -90,8 +127,17 @@
     <footer class="footer_content">
         <div class="footer_content_small_box">
             <p class="footer_logo"><img src="images/dionysos_logo.png"/></p>
+            <!--
+                img에 alt="dionysos"를 넣어주면 검색엔진에 더 걸려서 좋아요
+            -->
             <p class="footer_content_name footer_content_name_spacing">심호선 손미나 김정겸 유승훈 최유나</p>
+            <!--
+                저희 노션에 개인별 일지 작성 폴더가 생겼는데 그거 링크 추가 할 수 있게 개인별로 a tag로 수정해주세요~
+            -->
             <p class="footer_content_link"><a href="https://www.notion.so/052b42ae4dad4bb9b9131e4430c44177">제작일지</a></p>
+            <!--
+                이럴 경우에 a tag 속성 사용해주면 좋아요
+            -->
             <p class="footer_content_copyright">COPYRIGHT ⓒ 2021 Dionysos CORP. ALL RIGHT RESERVED</p>
         </div>
 
