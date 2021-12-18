@@ -4,25 +4,29 @@
 @import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/naumsquare.css');
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 
+
+
+
 @font-face {
-    font-family: 'LotteMartDream';
-    font-style: normal;
-    font-weight: 400;
-    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
-  }
-  @font-face {
-    font-family: 'LotteMartDream';
-    font-style: normal;
-    font-weight: 700;
-    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
-  }
-  @font-face {
-    font-family: 'LotteMartDream';
-    font-style: normal;
-    font-weight: 300;
-    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+	font-family: 'LotteMartDream';
+	font-style: normal;
+	font-weight: 400;
+	src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
   }
   
+  @font-face {
+	font-family: 'LotteMartDream';
+	font-style: normal;
+	font-weight: 700;
+	src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+  }
+  
+  @font-face {
+	font-family: 'LotteMartDream';
+	font-style: normal;
+	font-weight: 300;
+	src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+  }
 
 
 
@@ -58,7 +62,7 @@
 	textarea:-ms-input-placeholder {color:#aaa;} /* IE10+ */
 
 
-    .lottemartdream {font-family: 'LotteMartDream', sans-serif;}
+    .lottemartdream * {font-family: 'LotteMartDream', sans-serif;}
 	
 
 
@@ -101,9 +105,149 @@
 
 /*section04*/
 
+.section4_wine_tip {
+	width: 1280px;
+	margin: auto;
 
+}
+
+.section4_tip_txt1 {
+	font-size: 22px;
+	width: 450px;
+	margin: 0px auto;
+	font-weight: bold;
+	text-align: center;
+/* background-color: green;*/
+}
+
+.section4_tip_txt2 {
+	text-align: center;
+	font-size: 43px;
+	font-weight: bold;
+	width: 430px;
+	margin: 20px auto;
+/* background-color: green;*/
+}
+
+
+.lottemartdream * {
+	font-family: 'LotteMartDream', sans-serif;
+}
+
+	
+
+.section4_tip_red{
+	color: #880b0b
+}
+
+
+
+
+
+.section4_comma {
+	width: 100%;
+	background-color: green;
+
+}
+
+.section4_comma div img{
+	height: 50px;
+	width: 55px;
+	margin:  auto;
+	display:block;
+	
+
+}
+
+
+.section4_img-box {
+	width: 1100px ;
+	margin: 0 auto;
+	padding: 0px 10px 0px 40px;
+
+
+}
+
+.section4_img-box div img {
+	width: 250px;
+	height: 250px;
+	margin: 8px;
+
+
+}
+
+.section4_box{
+	width: 1280px;
+	height: 900px;
+	margin: auto;
+	padding: 110px 0px 160px 0px;
+
+/* background-color: green;*/
+}
 
 
 
 
 /*footer*/
+
+  .footer_content {
+            font-size: 16px;
+
+            color: white;
+
+            max-width: 100%;
+            padding: 100px 0 100px 0;
+
+            background-color: #880b0b;
+        }
+
+        .footer_content_small_box {
+            width: 1280px;
+            margin: auto;
+        }
+
+
+        .footer_content_name {
+            font-size: 16px;
+            width: 300px;
+            margin: auto;
+            text-align: center;
+        /* background-color: green;*/
+        }
+
+        .footer_content_link {
+            font-size: 16px;
+            width: 60px;
+            margin: 15px auto;
+            text-align: center;
+
+        }
+
+        .footer_content_name_spacing {
+            word-spacing: 13px;
+        }
+
+
+        .footer_content_copyright {
+
+            font-size: 16px;
+            width: 430px;
+            margin: 30px auto;
+            text-align: center;
+
+        }
+
+        .footer_logo {
+            height: 80px;
+            width: 170px;
+        /* background-color: green;*/
+            padding-left: 20px;
+
+            margin: 20px auto;
+        }
+
+     .footer_logo img{
+        height: 80px; 
+        width: 150px;
+    
+        }

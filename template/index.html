@@ -28,143 +28,9 @@
     <meta property="article:tag" content="내취향와인">
     <meta property="article:tag" content="wine">
     <meta property="article:tag" content="winetip">
+        
 
-
-    <style>
-    /* css 주석 */
-    /* 프론트 엔드는 이쪽으로 css를 넣으면 나중에 반응형 작업이 어렵거나 파일별로 들어가있어서 수정이 어려워요
-    default.css << 이쪽으로 작성해주셔야 나중에 수정이 편해요
-    css명을 조금 다르게 하시는게 타 파트 작업하는 분들이랑 안겹쳐요
-    예를 들면 .first .img .none 이런식으로 주면 나중에 섞이다가 css 틀어져버려요*/
     
-        .foot {/*footer_contant*/
-            font-size: 16px;
-
-            color: white;
-
-            max-width: 100%;
-            height: 440px; /*height 값을 주기보다는 padding이나 margin으로 높이 조절하는게 높이 값 가늠하기가 편해요
-            지금 보시면*/
-
-            background-color: #880b0b;
-        }
-
-        .small_box {/*footer_contant .small_box 이렇식으로 주면 얘가 직접적으로 받아요*/
-            height: 500px; /*footer 안에 애가 500px foot가 440px면 저렇게 공간이 생겨버려요
-            없애 버릴려면 footer한테 overflow: hidden을 주면 되요 근데 이렇게 되면 이제 위아래 너비가 안맞는 경우가 생겨서
-            height 보다는 padding이나 margin으로 조절하는게 편해요~*/
-            width: 1280px;
-            margin: auto;
-            padding-top: 90px;
-        }
-
-
-        .first {
-            font-size: 16px;
-            width: 300px;
-            margin: auto;
-            text-align: center;
-        / / background-color: green; /* << 수정*/
-        }
-
-        .second {
-            font-size: 16px;
-            width: 60px;
-            margin: 15px auto;
-            text-align: center;
-
-        }
-
-        .spacing_1 {
-            word-spacing: 13px;
-        }
-
-
-        .copyright {
-
-            font-size: 16px;
-            width: 430px;
-            margin: 30px auto;
-            text-align: center;
-
-        }
-
-        .logo {
-            height: 80px;
-            width: 170px;
-        / / background-color: green;
-            padding-left: 20px;
-
-            margin: 20px auto;
-        }
-
-        .wine_tip {
-            width: 1280px;
-            margin: auto;
-
-        }
-
-        .wine_tip1 {
-            font-size: 22px;
-            width: 450px;
-            margin: 0px auto;
-            font-weight: bold;
-            text-align: center;
-        / / background-color: green;
-        }
-
-        .wine_tip2 {
-            text-align: center;
-            font-size: 43px;
-            width: 430px;
-            margin: 20px auto;
-        / / background-color: green;
-        }
-
-        .comma {
-            height: 80px;
-            width: 80px;
-            //background-color: green;
-            padding-left: 25px;
-
-            margin: auto;
-
-        }
-
-
-        .img {
-            width: 1100px;
-            height: 600px;
-        / / background-color: green;
-            margin: auto;
-            padding: 20px 0px 0px 30px; /*요기 있넹ㅋㅋㅋㅋㅋㅋ*/
-        }
-
-        .none {
-            width: 1280px;
-            height: 900px;
-            margin: auto;
-            padding-bottom: 100px;
-            padding-top: 160px;
-            /*padding이나 margin 줄 떄 padding : 상하 좌우; padding: 상 좌 하 우; 이런 식으로 편하게 줄 수 있어요
-            지금 위 코드로 준다고 하면 padding:100 0 160 0; 이렇게 되겠죠?
-            */
-        / / background-color: green;
-        }
-
-        @font-face {
-            font-family: 'LotteMartDream';
-            font-style: normal;
-            font-weight: 1700;
-            src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
-        }
-
-        .lottemartdream * {
-            font-family: 'LotteMartDream', sans-serif;
-        }
-
-
-    </style>
 </head>
 <body>
 
@@ -185,61 +51,48 @@
     <!--section04, footer - 심호선 -->
     <section>
 
-        <div class="none">
-            <div class="wine_tip">
-                <p class="comma"><img src="images/따음표.png" height="50" width="54"/></p>
-                <!--img가 inline 특성을 가지고 있어서 display:block, margin:0 auto으로 줘버리고 이미지를 싸고 있는 애 넓이를 100%;
-                지금 comma에 들어가있는 padding 버리면 공백 조정하는데 더 편하겠죠ㅎㅎ
-                프론트엔드는 1px을 조절해야하는? 거의 그런 직업이라 공백 조절을 잘하는게 맞다고 봐여
-                이런걸로 디자이너 분들이랑 많이 싸우시거든요ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
-                일단은 지금 한번 확인하고 수정해보시면 될 것 같아요~
-                -->
-                <!--요렇게 태그에 직접적으로 주면 반응형 작업도 어렵고 수정이 어려워요
-                나중에 회사 들어가시거나 개발자랑 협업하는데 개발자가 이렇게 사용하는게 많거든요?
-                꺠물어버리고 싶을거예욬ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ 이렇게 들어간거 다 css 파일로 옮기기-->
-                <p class="wine_tip1 NanumSquare"> 어렵지 않게 알 수 있는 와인 상식과 어울리는 음식</p>
-                <p class="wine_tip2 lottemartdream">쉽게 알아보는 <a style="color: #880b0b">Wine Tip</a></p>
+        <div class="section4_box">
+            <div class="section4_wine_tip">
+                <p class="section4_comma"><img src="images/따음표.png"/></p>
+                <p class="section4_tip_txt1 NanumSquare"> 어렵지 않게 알 수 있는 와인 상식과 어울리는 음식</p>
+                <p class="section4_tip_txt2 lottemartdream">쉽게 알아보는 <a class="section4_tip_red">Wine Tip</a></p>
             </div>
-            <div class="img_box">
-                <div><!--요렇게 이미지에 반복적으로 들어가는 거는 클래명을 줘버려요 모부한테!
-                    
-                    .img_box div img {width: 250px; height: 250px; margin:8px} << 이런식으로 css 파일에 적으면
-                    img_box 밑에 div 밑 img가 css를 먹겠죠?
-                    img태그에 alt 속성은 이미지가 나오지 않는 경우 있죠? 그때 말로 이미지 설명을 할 수 있는 칸이예요
-                    그래서 만약 img가 찬 음식이다 그럼 alt="와인과 잘 어울리는 찬 음식" 이런식으로 작성해주시면 되요
-                    그리고 alt에 작성을 해야지 검색에 걸려요
-                -->
-                    <img style="width: 250px; height: 250px; margin:8px" alt=""
+            <div class="section4_img-box">
+                <div>
+
+                
+    
+                    <img alt="와인과 잘 어울리는"
                          src="https://dive.hyundaicard.com/resources/images/upload/content/b7349ae00c6247cc86094cb4938568a9.jpg"/>
-                    <img style="width: 250px; height: 250px; margin:8px" alt=""
+                    <img alt="와인과 잘 어울리는 치즈"
                          src="https://mblogthumb-phinf.pstatic.net/MjAyMTAzMDFfMTE4/MDAxNjE0NTg2MjAwNjE2.6oPaD6XarGKWlGJWGlvxkd28NZhI2SUKcCH_GMNDXGYg.juDopLacCG7Qh9cwAOCrCE70IRSPZPzly4dBzhKvjvIg.JPEG.jintamin428/IMG_2347.JPG?type=w800"/>
-                    <img style="width: 250px; height: 250px; margin:8px" alt=""
+                    <img alt="와인과 잘 어울리는 살라미"
                          src="https://contents.sixshop.com/uploadedFiles/108172/product/image_1626763451235.jpg"/>
-                    <img style="width: 250px; height: 250px; margin:8px" alt=""
+                    <img alt="와인과 잘 어울리는 과일채소"
                          src="https://thingool.hgodo.com/data/goods/upload/343/DT09AP0051A000/DT09AP0051A000_view_03.jpg"/>
 
 
                 </div>
                 <div>
-                    <img style="width: 250px; height: 250px;  margin:8px" alt=""
+                    <img alt="와인과 잘 어울리는 과자들"
                          src="https://contents.lotteon.com/itemimage/_v012219/LO/14/53/35/17/74/_1/45/33/51/77/5/LO1453351774_1453351775_1.gif"/>
-                    <img style="width: 250px; height: 250px;  margin:8px" alt=""
+                    <img alt="와인과 잘 어울리는 과자와 과일"
                          src="http://image.babosarang.co.kr/product/detail/CJ4/6607521498/_403.jpg"/>
-                    <img style="width: 250px; height: 250px;  margin:8px" alt=""
+                    <img alt="와인과 잘 어울리는 조각 치즈"
                          src="https://shop1.daumcdn.net/thumb/R500x500/?fname=http%3A%2F%2Fshop1.daumcdn.net%2Fshophow%2Fp%2FG13185531310.jpg%3Fut%3D20210518180153"/>
-                    <img style="width: 250px; height: 250px;  margin:8px" alt=""
+                    <img alt="와인과 잘 어울리는 감바스"
                          src="https://static.megamart.com/product/image/1316/13165611/13165611_1_960.jpg"/>
                 </div>
             </div>
         </div>
 
     </section>
-    <footer class="foot">
-        <div class="small_box">
-            <p class="logo"><img src="images/dionysos_logo.png" height="80" width="150"/></p>
-            <p class="first spacing_1">심호선 손미나 김정겸 유승훈 최유나</p>
-            <p class="second">제작일지</p> <!--제작일지 같은 경우는 저희 노션으로 바로 갈 수 있게 a 태그 사용해서 해주시면 됩니다-->
-            <p class="copyright">COPYRIGHT ⓒ 2021 Dionysos CORP. ALL RIGHT RESERVED</p>
+    <footer class="footer_content">
+        <div class="footer_content_small_box">
+            <p class="footer_logo"><img src="images/dionysos_logo.png"/></p>
+            <p class="footer_content_name footer_content_name_spacing">심호선 손미나 김정겸 유승훈 최유나</p>
+            <p class="footer_content_link"><a href="https://www.notion.so/052b42ae4dad4bb9b9131e4430c44177">제작일지</a></p>
+            <p class="footer_content_copyright">COPYRIGHT ⓒ 2021 Dionysos CORP. ALL RIGHT RESERVED</p>
         </div>
 
 
