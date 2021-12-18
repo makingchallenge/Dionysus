@@ -60,7 +60,7 @@
 
     .lottemartdream {font-family: 'LotteMartDream', sans-serif;}
 	
-	/*공통부분*/
+	/*공통부분 예시01*/
 	.title_box {padding-top:85px; background-image: url("../images/point_icon01.png"); background-repeat: no-repeat; background-position: top center; text-align: center; margin-bottom:75px;}
 	.title_box p {font-size:20px; margin-bottom:20px;}
 	.title_box h2 {font-size:40px; font-family: 'LotteMartDream', sans-serif; font-weight: bold; text-transform: capitalize;}
