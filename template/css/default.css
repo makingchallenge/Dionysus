@@ -116,7 +116,7 @@ h1,
 h2,
 h3,
 h4,
-h5, /*깃허브 코드스페이스 어디있어요~?*/
+h5, /*깃허브 코드스페이스 어디있어요~? 여기서 일단 파일을 컨드롤 +에스 눌러서 저장을 해요*/
 h6 {
   font-size: 100%;
   font-weight: normal;
@@ -205,18 +205,31 @@ textarea:-ms-input-placeholder {
 }
 
 .intro_bg {
-  background-image: url();
+  background-image: url("images/ex01.jpg");
   background-color: chartreuse;
   height: 500px;
-  width: cover;
+  width: 100%;
+  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .header {
   display: flex;
-  width: cover;
+  width: 100%; /*width는 cover가 없어요~*/
   height: 66px;
   margin: auto;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /*소수점 조정
+  rgba 라는게 레드, 그린, 블루, 투명도 예요
+  헤더에 0.5를 줬는데 로고랑 네비에 또 0.5씩 주면 중첩되서 컬러가 달라져요
+  또 궁금하신거 있을까용?
+  */
 }
 
 .header > .logo {
@@ -224,16 +237,13 @@ textarea:-ms-input-placeholder {
   height: 60px;
   margin-left: 40px;
   margin-top: 3px;
-  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .nav {
   display: flex;
   justify-content: flex-end;
-  background-color: blue;
   width: 1200px;
   line-height: 64px;
-  background-color: rgba(255, 255, 255, 0.5);
   font-weight: bold;
 }
 
@@ -248,11 +258,9 @@ textarea:-ms-input-placeholder {
 }
 
 .intro_text {
-  width: cover;
+  width: 30%;
   margin: auto;
-  text-align: center;
-  background-color: pink;
-  margin: 170px auto;
+  margin: 100px 1000px 100px 90px;
 }
 
 .intro_text > h4 {
@@ -277,6 +285,16 @@ textarea:-ms-input-placeholder {
   color: #860303;
 }
 
+/*
+지금 보시면 css 파일이 index.html이랑 은같은 위치에 있죠?
+그럴 경우에는 index.html이랑 똑같이 주면 되여
+background-image:url('images/ex01.jpg')
+만약 css 폴더 안에 css파일이 있을 경우에는
+background-image:url('../images/ex01.jpg')
+이런식으로 되겠죠?
+..가  하나 폴더를 나간다는 말이예요
+
+*/
 .wine_list {
   display: flex;
   text-align: center;
