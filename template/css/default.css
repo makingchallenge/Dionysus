@@ -117,7 +117,7 @@
 	margin: 0 auto;
 	font-weight: bold;
 	text-align: center;
-/* background-color: green;*/
+
 }
 
 .section4_tip_txt2 {
@@ -126,7 +126,7 @@
 	font-weight: bold;
 	width: 430px;
 	margin: 15px auto;
-/* background-color: green;*/
+
 }
 	
 
@@ -140,7 +140,7 @@
 
 .section4_comma {
 	width: 100%;
-	/*background-color: green;*/
+	
 
 }
 
@@ -153,28 +153,12 @@
 }
 
 
-.section4_img-box {
-	width: 1100px ;
-	margin: 0 auto;
-	padding: 30px 10px 0px 40px;
-
-
-}
-
-.section4_img-box div img {
-	width: 250px;
-	height: 250px;
-	margin: 8px;
-
-
-}
-
 .section4_box{
 	width: 1280px;
 	margin: auto;
 	padding: 120px 0px 190px 0px;
 
-/* background-color: green;*/
+
 }
 
 
@@ -204,7 +188,7 @@
             width: 300px;
             margin: auto;
             text-align: center;
-        /* background-color: green;*/
+        
         }
 
         .footer_content_link {
@@ -217,7 +201,7 @@
 
         .footer_content_name_spacing {
             word-spacing: 13px;
-			/*와 good!!!!!! 이 속성 어떻게 아셨지ㅋㅋㅋㅋ 공부 하신 티가 나네여!!*/
+			
         }
 
 
@@ -232,7 +216,7 @@
 
         .footer_logo {
             width: 100%;
-        /* background-color: green;*/
+        
 
 
         }
@@ -244,3 +228,168 @@
 		 margin: 20px auto;
     
         }
+
+
+
+		/*Swiper*/
+
+        
+
+		  .section4{
+			width: 1280px;
+			margin: 0 auto;
+		  }
+		  
+		  .section4-img{
+			width:1280px;
+			margin:0px auto;
+			
+		  }
+
+		  /*이미지를 크롭해서 넣는 법을 구글링해봤는데..ㅎㅎ 
+		  안이쁘네요 썸네일 자르는 걸 다른 방식을 고민해여할 것같아요*/
+
+		  .slick-slide /*section4-img*/{
+		
+			display: block; 
+			overflow: hidden; 
+			width: 1280px;
+			margin: 10px;
+		  }
+
+		  .slick-slide img /*section4-img <- 앞부분에 이 명령어를 넣으면 스타일이 적용이 안되던데 왜 그럴까요?*/{
+	
+			margin: 15px;
+			width: 270px;
+			height: 270px;
+			margin: 8% -45%;
+   			width: 177.777%;
+
+            }
+
+	   
+		  .section4 .slick-dots li button:before {
+			font-size:20px;
+			color: gray;}
+
+
+		/* 화살표 */
+
+		.slick-prev/*section4-arrow*/ {
+			left: -25px;
+		}
+		.slick-prev, .slick-next /*section4-arrow*/{
+			font-size: 0px;
+			line-height: 0;
+			position: absolute;
+			top: 50%;
+			display: block;
+			width: 20px;
+			height: 20px;
+			margin-top: -10px;
+			padding: 0px;
+			cursor: pointer;
+			color: transparent;
+			border: 0px;
+			outline: 0px;
+			background: transparent;
+		}
+
+		
+		}
+		.slick-slider /*section4-arrow*/ {
+			position: relative;
+			display: block;
+			box-sizing: border-box;
+			user-select: none;
+			touch-action: pan-y;
+			-webkit-tap-highlight-color: transparent;
+		}
+		.slick-slider /*section4-arrow*/ {
+			position: relative;
+			display: block;
+			box-sizing: border-box;
+			user-select: none;
+			touch-action: pan-y;
+			-webkit-tap-highlight-color: transparent;
+		}
+	
+		.slick-prev::before /*section4-arrow*/ {
+			content: "←";
+		}
+		.slick-prev::before, .slick-next::before /*section4-arrow*/ {
+			font-family: slick;
+			font-size: 30px;
+			line-height: 1;
+			opacity: 0.75;
+			color: gray;
+			-webkit-font-smoothing: antialiased;
+			
+		}
+
+
+		/* 카드 몸체 */
+
+			.slick-list /*section4-list*/{
+				width: 1150px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				margin:  auto;
+				padding: 0;
+			}
+			
+			div {
+				display: block;
+			}
+			.slick-slider /*section4-list*/{
+				position: relative;
+				display: block;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				-webkit-touch-callout: none;
+				-khtml-user-select: none;
+				-ms-touch-action: pan-y;
+				touch-action: pan-y;
+				-webkit-tap-highlight-color: transparent;
+			}
+
+
+		/*슬라이드 몸통*/
+			
+
+			.section4-slide.slick-slider .slick-track, .slick-slider .slick-list {
+				-webkit-transform: translate3d(0,0,0);
+				-moz-transform: translate3d(0,0,0);
+				-ms-transform: translate3d(0,0,0);
+				-o-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+			}
+
+			.section4-slide.slick-list {
+				width: 1150px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				margin: 0px auto;
+				padding: 0px;
+			}
+			.section4-slide.slick-list {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				margin: 0 auto;
+				padding: 0;
+
+			}
+
+			/*하단 버튼 <-- 이게 화살표 넘기는 파트랑 동일하게 연동되지 않아요. 
+							6개를 넘기면 밑에 6개 하단 버튼이 있어야하는데 3개가 있는 정도*/
+
+
+
+			/*여기서 이제 css 수정하면 되여*/

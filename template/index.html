@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
-    <link rel="stylesheet" href="css/default.css">
+    
     <!-- <link rel="stylesheet" href="/css/responsive.css"> / 반응형 작업시 추가 -->
 
     <script src="js/modernizr.js"></script> <!-- Modernizr -->
@@ -30,7 +30,18 @@
     <meta property="article:tag" content="winetip">
         
 
-    
+    <!--심호선-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
+    <!--얘네가 밑으로 가면 안됨-->
+
+
+    <!--default.css 도 항상 밑!-->
+    <link rel="stylesheet" href="css/default.css">
+
 </head>
 <body>
 
@@ -53,97 +64,115 @@
 
         <div class="section4_box">
             <div class="section4_wine_tip">
-                <p class="section4_comma"><img src="images/따음표.png"/></p>
-                <!--
-                    1. 이미지명은 영문으로 하는게 좋아요
-                    국문으로 했을 때 이미지 읽어올 때 읽어오지 못하는 경우도 있어요.
+                <p class="section4_comma"><img src="images/point_icon01.png"/></p>
+              
                     
-                    2. 이렇게 디자인 적인 이미지를 추가시 background-img 속성을 사용하는 방법도 있어요 (이런 방법도 있다~ 라는 식으로 참고용으로 보세요ㅎㅎ)
-                    참고
-                    yuna 브랜치 > index.html > ctrl + f > 예시 1 검색
-                               > default.html > ctrl + f > 예시 1 검색
-                -->
-                <p class="section4_tip_txt1 NanumSquare"> 어렵지 않게 알 수 있는 와인 상식과 어울리는 음식</p>
-                <!--
-                    default.css 파일에 NanumSquare class 가 없어서 아무런 css를 주지 못하고 있어요
-                    naumsquare font 같은 경우 html,body(css파일 35번째줄)에 font-family:'NanumSquare', sans-serif;로 이미 주고 있어서 따로 정해주지 않아도 괜찮아요
-                -->
-                <p class="section4_tip_txt2 lottemartdream">쉽게 알아보는 <a class="section4_tip_red">Wine Tip</a></p>
-                <!--
-                    이렇게 포인트를 줄 경우에는 span tag를 사용하는게 좋아요
-                    span tag
-                    <span></span> 태그는 <div></div> 태그처럼 특별한 기능을 갖고있지 않고, CSS에 속성을 줘서 사용해요
-                    <div> 태그와의 차이점은 display속성이 block이 아닌, inline이라는 점
-                    이 둘의 차이를 쉽게 설명하자면, <div>는 줄 바꿈이 되지만, <span>은 줄 바꿈이 되지 않다는 점이예요
-                    
-                    a tag
-                    a 태그는 하이퍼링크를 걸어주는 태그예요
-
-                    a tag 속성
-                        href: 클릭시 이동 할 링크
-                        target: 링크를 여는 방법
-                        _self: 현재 페이지 (기본값)
-                        _blank: 새 탭
-                        _parent: 부모 페이지로, iframe 등이 사용된 환경에서 사용
-                        _top: 최상위 페이지로, iframe 등이 사용된 환경에서 사용
-                        프레임이름: 직접 프레임이름을 명시해서 사용
-                    
-                    a tag 속성 사용 예시
-                    <a href="www.naver.com" target="_blank">네이버</a>
-
-                    a tag 그대로 사용시 웹표준에 맞지 않아서 웹표준 검사에 오류1로 걸려요~
-                -->
-            </div>
-            <div class="section4_img-box">
-                <div>
-
+                <p class="section4_tip_txt1"> 어렵지 않게 알 수 있는 와인 상식과 어울리는 음식</p>
+               
                 
-    
-                    <img alt="와인과 잘 어울리는"
-                         src="https://dive.hyundaicard.com/resources/images/upload/content/b7349ae00c6247cc86094cb4938568a9.jpg"/>
-                    <img alt="와인과 잘 어울리는 치즈"
-                         src="https://mblogthumb-phinf.pstatic.net/MjAyMTAzMDFfMTE4/MDAxNjE0NTg2MjAwNjE2.6oPaD6XarGKWlGJWGlvxkd28NZhI2SUKcCH_GMNDXGYg.juDopLacCG7Qh9cwAOCrCE70IRSPZPzly4dBzhKvjvIg.JPEG.jintamin428/IMG_2347.JPG?type=w800"/>
-                    <img alt="와인과 잘 어울리는 살라미"
-                         src="https://contents.sixshop.com/uploadedFiles/108172/product/image_1626763451235.jpg"/>
-                    <img alt="와인과 잘 어울리는 과일채소"
-                         src="https://thingool.hgodo.com/data/goods/upload/343/DT09AP0051A000/DT09AP0051A000_view_03.jpg"/>
-
-
-                </div>
-                <div>
-                    <img alt="와인과 잘 어울리는 과자들"
-                         src="https://contents.lotteon.com/itemimage/_v012219/LO/14/53/35/17/74/_1/45/33/51/77/5/LO1453351774_1453351775_1.gif"/>
-                    <img alt="와인과 잘 어울리는 과자와 과일"
-                         src="http://image.babosarang.co.kr/product/detail/CJ4/6607521498/_403.jpg"/>
-                    <img alt="와인과 잘 어울리는 조각 치즈"
-                         src="https://shop1.daumcdn.net/thumb/R500x500/?fname=http%3A%2F%2Fshop1.daumcdn.net%2Fshophow%2Fp%2FG13185531310.jpg%3Fut%3D20210518180153"/>
-                    <img alt="와인과 잘 어울리는 감바스"
-                         src="https://static.megamart.com/product/image/1316/13165611/13165611_1_960.jpg"/>
-                </div>
+                <p class="section4_tip_txt2 lottemartdream">쉽게 알아보는 <span class="section4_tip_red">Wine Tip</span></p>
+               
             </div>
+            
+
+
+       
+
+
+
+            <!--참고-->
+            <div class="section4">
+                <div class="section4-img">
+                    <div class=>
+                        <!--여기가 유튜브 썸네일-->
+                        <img alt="샴페인잔 고르는 팁!" 
+                    src="https://i.ytimg.com/vi/tyiBhjUvkyk/maxresdefault.jpg"/>
+                    <img alt="와인 따르는 팁" 
+                    src="https://i.ytimg.com/vi/tyiBhjUvkyk/maxresdefault.jpg"/>
+                    </div>
+                    <div>
+                        <img alt="와인따는 팁"
+                    src="https://i.ytimg.com/vi/tyiBhjUvkyk/maxresdefault.jpg"/>
+                    <img alt="씬님 와인 추천영상"
+                    src="https://i.ytimg.com/vi/tyiBhjUvkyk/maxresdefault.jpg"/>
+                    </div>
+                    <div>
+                        <img alt="오래된 와인 사용법 와인팁"
+                    src="https://i.ytimg.com/vi/tyiBhjUvkyk/maxresdefault.jpg"/>
+                    <img alt="와인용어 총정리"
+                    src="https://i.ytimg.com/vi/tyiBhjUvkyk/maxresdefault.jpg"/>
+                    </div>
+                    <div>
+                        <img alt="동네 와인바 차리는 법 와인팁"
+                    src="https://i.ytimg.com/vi/tyiBhjUvkyk/maxresdefault.jpg"/>
+                    <img alt="깨지지않게 와인배송"
+                    src="https://i.ytimg.com/vi/tyiBhjUvkyk/maxresdefault.jpg"/>
+                    </div>
+                    <div>
+                        <img alt="보르도와인은 얼마나 숙성 와인팁?"
+                    src="https://i.ytimg.com/vi/tyiBhjUvkyk/maxresdefault.jpg"/>
+                    <img alt="와인씰 따는 법 와인팁"
+                    src="https://i.ytimg.com/vi/tyiBhjUvkyk/maxresdefault.jpg"/>
+                    </div>
+                    <div>
+                        <img alt="와인과 잘 어울리는 과자들"
+                    src="https://i.ytimg.com/vi/tyiBhjUvkyk/maxresdefault.jpg"/>
+                    <img alt="와인과 잘 어울리는 과자와 과일"
+                    src="https://i.ytimg.com/vi/tyiBhjUvkyk/maxresdefault.jpg"/>
+                    </div>
+                    
+                    <div>
+                        <img alt="와인과 잘 어울리는 과자들"
+                    src="https://i.ytimg.com/vi/tyiBhjUvkyk/maxresdefault.jpg"/>
+                    <img alt="와인과 잘 어울리는 과자와 과일"
+                    src="https://i.ytimg.com/vi/tyiBhjUvkyk/maxresdefault.jpg"/>
+                    </div>
+                   
+                   
+                    
+                </div>
+                
+          </div>
         </div>
 
     </section>
     <footer class="footer_content">
         <div class="footer_content_small_box">
-            <p class="footer_logo"><img src="images/dionysos_logo.png"/></p>
-            <!--
-                img에 alt="dionysos"를 넣어주면 검색엔진에 더 걸려서 좋아요
-            -->
-            <p class="footer_content_name footer_content_name_spacing">심호선 손미나 김정겸 유승훈 최유나</p>
-            <!--
-                저희 노션에 개인별 일지 작성 폴더가 생겼는데 그거 링크 추가 할 수 있게 개인별로 a tag로 수정해주세요~
-            -->
-            <p class="footer_content_link"><a href="https://www.notion.so/052b42ae4dad4bb9b9131e4430c44177">제작일지</a></p>
-            <!--
-                이럴 경우에 a tag 속성 사용해주면 좋아요
-            -->
+            <p class="footer_logo"><img src="images/dionysos_logo.png" alt="dionysos"/></p>
+        
+           
+            <p class="footer_content_name footer_content_name_spacing">
+                <a href="https://www.notion.so/d39810e923f64908ab1915af95e59bc1?v=c9f42558573c46ba93a46f817c20b7d9" target="_blank">심호선</a> 
+                <a href="https://www.notion.so/1522fb3cdda34c09a9c57f98c99550d4?v=f9c8e64163b0458faf0bac95d6c5322d" target="_blank">손미나</a> 
+                <a href="https://www.notion.so/f4ae108aed854324832f4798bd8f043e?v=e7a2574d880d433e85c0a2ba126e5753" target="_blank">김정겸</a>
+                <a href="https://www.notion.so/41651b5b6d11469d870cbf04d48f77a2?v=98deaefb4de0452f9c18704e8498b7dd" target="_blank">유승훈</a>
+                <a href="https://www.notion.so/f9bae60151544cb4975ec8549f5a0d49?v=62990f1b19b34b8f99f24579750c52c8" target="_blank">최유나</a></p>
+            
+            <p class="footer_content_link"><a href="https://www.notion.so/052b42ae4dad4bb9b9131e4430c44177" target="_blank">제작일지</a></p>
+            
             <p class="footer_content_copyright">COPYRIGHT ⓒ 2021 Dionysos CORP. ALL RIGHT RESERVED</p>
         </div>
 
 
     </footer>
 
+    <script>
+        
+    /*
+    이렇게 계속 틀어질 경우에는 그냥 html에 넣어버려요
+    make.js 보다 밑으로 가면 x
+    */
+        $(document).ready(function(){
+          $('.section4-img').slick({
+          slidesToShow: 4,
+          dots:true,
+          centerMode: true,
+          });
+        });
+    </script>
+
+    <script src="js/make.js"></script>
+    
 </div>
 
 </body>
