@@ -194,6 +194,7 @@ textarea:-ms-input-placeholder {
 }
 
 /* header, nav, section01 */
+
 * {
   list-style: none;
   text-decoration: none;
@@ -205,7 +206,7 @@ textarea:-ms-input-placeholder {
 }
 
 .intro_bg {
-  background-image: url("images/ex01.jpg");
+  background-image: url("../images/ex01.jpg");
   background-color: chartreuse;
   height: 500px;
   width: 100%;
@@ -248,6 +249,7 @@ textarea:-ms-input-placeholder {
 }
 
 .nav > li {
+  font-size: 16px;
   margin-left: 84px;
   margin-right: 30px;
   justify-content: flex-end;
@@ -266,19 +268,26 @@ textarea:-ms-input-placeholder {
 .intro_text > h4 {
   color: #860303;
   font-size: 25px;
+  font-weight: bold;
 }
 
 .intro_logo {
   height: 150px;
-  width: 230px;
+  width: 300px;
 }
 
 .sec2_des {
   text-align: center;
 }
 
-.sec2 > .sec2_des > .big {
-  font-size: 100px;
+.sec2_des > h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sec2_des > h1 {
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .wine_color {
@@ -322,6 +331,86 @@ background-image:url('../images/ex01.jpg')
   width: 100px;
   height: 150px;
   background-color: aqua;
+}
+
+.icon {
+  width: 170px;
+  height: 200px;
+}
+
+/*SWIPER 슬라이드 스크립트*/
+
+* {
+  box-sizing: border-box;
+}
+
+.html {
+  height: 100vh;
+  overflow: hidden;
+} /*그냥 HTML로 먹이면 위에꺼까지 영향을 받아서 
+그 SWIPER에서 복붙해온 HTML 코드를 감싸는 DIV를 만들고
+클래스로 먹였는데.. 음.. 이렇게 하면 안될것같은데,
+다른 좋은 방법이 있을지..  밑에 BODY클래스도 마찬가지 상황이구요*/
+
+.body {
+  background: linear-gradient(45deg, #51cce2, #3369e7);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+
+.bk-slider {
+  position: relative;
+  width: 90vw;
+  height: auto;
+  padding: 50px 0 100px;
+}
+
+.swiper {
+  width: 100%;
+  height: 200px;
+  overflow: visible;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  background: white;
+  transition: all 0.3s ease;
+}
+.swiper-slide.swiper-slide-active {
+  color: #fff;
+  background: linear-gradient(45deg, #f69259, #f16975);
+  transform: scale(1.4);
+  z-index: 2;
+}
+
+/* ARROWS */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #f69259;
+}
+
+/* PAGINATION */
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  color: #fff;
+  background: linear-gradient(45deg, #f69259, #f16975);
 }
 
 /*section02*/
