@@ -11,7 +11,7 @@ function clear_checkbox() {
 
 
     //리스트 상단 태그 리셋
-    
+
 
 
 
@@ -38,6 +38,7 @@ function open_Set03_tab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     document.getElementById("sec03_resetbtn").style.display = "block";
     evt.currentTarget.className += " focus";
+
 }
 
 
@@ -45,24 +46,27 @@ function open_Set03_tab(evt, tabName) {
     //section03 if click the checkbox - 리스트 좌측 상단 태그 추가, 리스트 추가
 function checkbox_onclick() {
 
+
     var wineinfor = document.getElementById("winelist_ctw");
     wineinfor.classList.add("view_wlist");
 
     
     //리스트 좌측 상단 태그 추가
 
+
+
+
     //리스트 추가
+
 
 
 }
 
+
+
+
+
     //section03 wine list
-
-
-
-
-
-
 
 
 
@@ -83,7 +87,9 @@ function load_wineif() {
 
 
 
-    //우측 네비 와인 정보 추가
+    //우측 네비 와인 정보 추가 / 1. slide 미 작업한 상태 / 2. slide 작업 시 내용 추가 sciprt 부분 작업
+    var wineinfor = document.getElementById("r_nav");
+    wineinfor.classList.add("view_rnav");
 
 
 

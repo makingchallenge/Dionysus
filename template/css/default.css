@@ -124,13 +124,17 @@ header ul li:last-child a:first-child {
 }
 
 /*nav*/
-nav {
+nav { 
+    display:none;
     position: fixed;
     top: 25%;
     right: 3%;
     z-index: 999;
 
     display:none;
+}
+nav#r_nav.view_rnav{
+    display:block; 
 }
 nav ul {
     width: 100px;
