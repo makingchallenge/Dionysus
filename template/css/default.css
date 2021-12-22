@@ -251,10 +251,11 @@
 
 		  .slick-slide /*section4-img*/{
 		
-			display: block; 
-			overflow: hidden; 
+			display: block;  
 			width: 1280px;
 			margin: 10px;
+
+			/*overflow: hidden;*/
 		  }
 
 		  .slick-slide img /*section4-img <- 앞부분에 이 명령어를 넣으면 스타일이 적용이 안되던데 왜 그럴까요?*/{
@@ -262,8 +263,8 @@
 			margin: 15px;
 			width: 270px;
 			height: 270px;
-			margin: 8% -45%;
-   			width: 177.777%;
+			/*margin: 8% -45%;
+   			width: 177.777%;*/
 
             }
 
@@ -335,8 +336,9 @@
 				position: relative;
 				display: block;
 				overflow: hidden;
-				margin:  auto;
 				padding: 0;
+				margin:  auto;
+				
 			}
 			
 			div {
