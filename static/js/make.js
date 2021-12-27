@@ -43,24 +43,55 @@ function open_Set03_tab(evt, tabName) {
 
 
 
-    //section03 if click the checkbox - 리스트 좌측 상단 태그 추가, 리스트 추가
+    //section03 if click the checkbox - 리스트 추가
 function checkbox_onclick() {
-
-
     var wineinfor = document.getElementById("winelist_ctw");
     wineinfor.classList.add("view_wlist");
 
-    
-    //리스트 좌측 상단 태그 추가
+    // > 선택된 목록에서 value 찾기
+    const query = 'input[class="set03_checkbox"]:checked';
+    const selectedEls = document.querySelectorAll(query);
+    let result = '';
+    // let span_btn = '<span>x</span>'
+
+    // > > 반복문
+    selectedEls.forEach((el) => {
+        result += '<button type="button"># ' + el.name + '</button>'; //+ span_btn
+    });
 
 
-
-
-    //리스트 추가
-
-
+    // > > 출력
+    document.getElementById('list_ctt_tag').innerHTML = result; 
 
 }
+
+//section03 if click the radio - 리스트 추가
+function radio_onclick() {
+    var wineinfor2 = document.getElementById("winelist_ctw");
+    wineinfor2.classList.add("view_wlist");
+
+    // > 선택된 목록에서 value 찾기
+    const query2 = 'input[type="radio"]:checked';
+    const selectedEls2 = document.querySelectorAll(query2);
+    let result2 = '';
+    // let span_btn = '<span>x</span>'
+
+    // > > 반복문
+    selectedEls2.forEach((el) => {
+        result2 += '<button type="button"># ' + el.value + '</button>'; //+ span_btn
+    });
+
+
+    // > > 출력
+    document.getElementById('list_ctt_tag').innerHTML = result2; 
+
+}
+
+
+
+    //section03 if click the all checkbox - 같은 형제 값 checkbox 값 모두 제외
+
+
 
 
 

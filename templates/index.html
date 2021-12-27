@@ -9,20 +9,16 @@
 
         <title>Dionysus</title>
 
-        <link rel="shortcut icon" type="image/x-icon" href="/../static/images/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="../static/images/favicon.ico">
         <!-- 파비콘 생성해야함 -->
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
 
         <link rel="stylesheet" href="../static/css/default.css">
+        <link rel="stylesheet" href="../static/css/responsive.css">
         <!-- <link rel="stylesheet" href="/css/responsive.css"> / 반응형 작업시 추가 -->
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><!-- jquery -->
         <script src="../static/js/modernizr.js"></script>
         <!-- Modernizr -->
         <meta name="copyright" content="@Tim Dionysus">
@@ -33,9 +29,7 @@
 
         <meta property="og:title" content="Tim Dionysus">
         <!-- <meta property="og:url" content=""> / 도메인 생성 후 추가 -->
-        <meta
-            property="og:description"
-            content="Dionysus - 내 취향에 맞는 와인을 찾고 싶을 때 / 와인정보 / 와인팁">
+        <meta property="og:description" content="Dionysus - 내 취향에 맞는 와인을 찾고 싶을 때 / 와인정보 / 와인팁">
         <meta property="article:tag" content="와인검색">
         <meta property="article:tag" content="내취향와인">
         <meta property="article:tag" content="wine">
@@ -190,27 +184,27 @@
                                 <!--종류-->
                                 <ul>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0101" class="set03_checkbox" onclick="checkbox_onclick()" value="와인 종류 모두">
+                                        <input type="checkbox" name="와인 모두" id="checkbox0101" class="set03_checkbox" onclick="checkbox_onclick()" value="wine_all01">
                                         <label for="checkbox0101">All</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0102" class="set03_checkbox" onclick="checkbox_onclick()" value="레드와인">
+                                        <input type="checkbox" name="레드와인" id="checkbox0102" class="set03_checkbox" onclick="checkbox_onclick()" value="red_wine">
                                         <label for="checkbox0102">레드와인</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0103" class="set03_checkbox" onclick="checkbox_onclick()" value="화이트와인">
+                                        <input type="checkbox" name="화이트와인" id="checkbox0103" class="set03_checkbox" onclick="checkbox_onclick()" value="white_wine">
                                         <label for="checkbox0103">화이트와인</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0104" class="set03_checkbox" onclick="checkbox_onclick()" value="스파클링">
+                                        <input type="checkbox" name="스파클링" id="checkbox0104" class="set03_checkbox" onclick="checkbox_onclick()" value="sparkling_wine">
                                         <label for="checkbox0104">스파클링</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0105" class="set03_checkbox" onclick="checkbox_onclick()" value="로제와인">
-                                        <label for="checkbox0105">스파클링</label>
+                                        <input type="checkbox" name="로제와인" id="checkbox0105" class="set03_checkbox" onclick="checkbox_onclick()" value="rose_wine">
+                                        <label for="checkbox0105">로제와인</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0106" class="set03_checkbox" onclick="checkbox_onclick()" value="조정강화">
+                                        <input type="checkbox" name="주정강화" id="checkbox0106" class="set03_checkbox" onclick="checkbox_onclick()" value="Fortified_Wine">
                                         <label for="checkbox0106">주정강화</label>
                                     </li>
                                 </ul>
@@ -220,55 +214,55 @@
                                 <!--국가별-->
                                 <ul>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0201" class="set03_checkbox" onclick="checkbox_onclick()" value="국가 모두">
+                                        <input type="checkbox" name="국가 모두" id="checkbox0201" class="set03_checkbox" onclick="checkbox_onclick()" value="국가 모두">
                                         <label for="checkbox0201">All</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0202" class="set03_checkbox" onclick="checkbox_onclick()" value="프랑스 와인">
+                                        <input type="checkbox" name="프랑스" id="checkbox0202" class="set03_checkbox" onclick="checkbox_onclick()" value="프랑스 와인">
                                         <label for="checkbox0202">프랑스</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0203" class="set03_checkbox" onclick="checkbox_onclick()" value="이탈리아 와인">
+                                        <input type="checkbox" name="이탈리아" id="checkbox0203" class="set03_checkbox" onclick="checkbox_onclick()" value="이탈리아 와인">
                                         <label for="checkbox0203">이탈리아</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0204" class="set03_checkbox" onclick="checkbox_onclick()" value="스페인 와인">
+                                        <input type="checkbox" name="스페인" id="checkbox0204" class="set03_checkbox" onclick="checkbox_onclick()" value="스페인 와인">
                                         <label for="checkbox0204">스페인</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0205" class="set03_checkbox" onclick="checkbox_onclick()" value="포르투갈 와인">
+                                        <input type="checkbox" name="포르투갈" id="checkbox0205" class="set03_checkbox" onclick="checkbox_onclick()" value="포르투갈 와인">
                                         <label for="checkbox0205">포르투갈</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0206" class="set03_checkbox" onclick="checkbox_onclick()" value="독일 와인">
+                                        <input type="checkbox" name="독일" id="checkbox0206" class="set03_checkbox" onclick="checkbox_onclick()" value="독일 와인">
                                         <label for="checkbox0206">독일</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0208" class="set03_checkbox" onclick="checkbox_onclick()" value="오스트리아 와인">
+                                        <input type="checkbox" name="오스트리아" id="checkbox0208" class="set03_checkbox" onclick="checkbox_onclick()" value="오스트리아 와인">
                                         <label for="checkbox0208">오스트리아</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0209" class="set03_checkbox" onclick="checkbox_onclick()" value="미국 와인">
+                                        <input type="checkbox" name="미국" id="checkbox0209" class="set03_checkbox" onclick="checkbox_onclick()" value="미국 와인">
                                         <label for="checkbox0209">미국</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0210" class="set03_checkbox" onclick="checkbox_onclick()" value="호주 와인">
+                                        <input type="checkbox" name="호주" id="checkbox0210" class="set03_checkbox" onclick="checkbox_onclick()" value="호주 와인">
                                         <label for="checkbox0210">호주</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0211" class="set03_checkbox" onclick="checkbox_onclick()" value="뉴질랜드 와인">
+                                        <input type="checkbox" name="뉴질랜드" id="checkbox0211" class="set03_checkbox" onclick="checkbox_onclick()" value="뉴질랜드 와인">
                                         <label for="checkbox0211">뉴질랜드</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0212" class="set03_checkbox" onclick="checkbox_onclick()" value="칠레 와인">
+                                        <input type="checkbox" name="칠레" id="checkbox0212" class="set03_checkbox" onclick="checkbox_onclick()" value="칠레 와인">
                                         <label for="checkbox0212">칠레</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0213" class="set03_checkbox" onclick="checkbox_onclick()" value="아르헨티나 와인">
+                                        <input type="checkbox" name="아르헨티나" id="checkbox0213" class="set03_checkbox" onclick="checkbox_onclick()" value="아르헨티나 와인">
                                         <label for="checkbox0213">아르헨티나</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0214" class="set03_checkbox" onclick="checkbox_onclick()" value="남아프리카 와인">
+                                        <input type="checkbox" name="남아프리카" id="checkbox0214" class="set03_checkbox" onclick="checkbox_onclick()" value="남아프리카 와인">
                                         <label for="checkbox0214">남아프리카</label>
                                     </li>
                                 </ul>
@@ -278,66 +272,150 @@
                                 <!--가격대-->
                                 <ul>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0301" class="set03_checkbox" onclick="checkbox_onclick()" value="가격 상관없음">
+                                        <input type="checkbox" name="가격대 모두" id="checkbox0301" class="set03_checkbox" onclick="checkbox_onclick()" value="가격 상관없음">
                                         <label for="checkbox0301">All</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0302" class="set03_checkbox" onclick="checkbox_onclick()" value="1만원 이하">
+                                        <input type="checkbox" name="1만원 이하" id="checkbox0302" class="set03_checkbox" onclick="checkbox_onclick()" value="1만원 이하">
                                         <label for="checkbox0302">1만원 이하</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0303" class="set03_checkbox" onclick="checkbox_onclick()" value="1만원 ~ 3만원">
+                                        <input type="checkbox" name="1만원 ~ 3만원" id="checkbox0303" class="set03_checkbox" onclick="checkbox_onclick()" value="1만원 ~ 3만원">
                                         <label for="checkbox0303">1만원 ~ 3만원</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0304" class="set03_checkbox" onclick="checkbox_onclick()" value="3만원 ~ 5만원">
+                                        <input type="checkbox" name="3만원 ~ 5만원" id="checkbox0304" class="set03_checkbox" onclick="checkbox_onclick()" value="3만원 ~ 5만원">
                                         <label for="checkbox0304">3만원 ~ 5만원</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0305" class="set03_checkbox" onclick="checkbox_onclick()" value="5만원 ~ 7만원">
+                                        <input type="checkbox" name="5만원 ~ 7만원" id="checkbox0305" class="set03_checkbox" onclick="checkbox_onclick()" value="5만원 ~ 7만원">
                                         <label for="checkbox0305">5만원 ~ 7만원</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0306" class="set03_checkbox" onclick="checkbox_onclick()" value="7만원 ~ 10만원">
+                                        <input type="checkbox" name="7만원 ~ 10만원" id="checkbox0306" class="set03_checkbox" onclick="checkbox_onclick()" value="7만원 ~ 10만원">
                                         <label for="checkbox0306">7만원 ~ 10만원</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0307" class="set03_checkbox" onclick="checkbox_onclick()" value="10만원 ~ 20만원">
+                                        <input type="checkbox" name="10만원 ~ 20만원" id="checkbox0307" class="set03_checkbox" onclick="checkbox_onclick()" value="10만원 ~ 20만원">
                                         <label for="checkbox0307">10만원 ~ 20만원</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0308" class="set03_checkbox" onclick="checkbox_onclick()" value="20만원 ~ 50만원">
+                                        <input type="checkbox" name="20만원 ~ 50만원" id="checkbox0308" class="set03_checkbox" onclick="checkbox_onclick()" value="20만원 ~ 50만원">
                                         <label for="checkbox0308">20만원 ~ 50만원</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0309" class="set03_checkbox" onclick="checkbox_onclick()" value="50만원 ~ 100만원">
+                                        <input type="checkbox" name="50만원 ~ 100만원" id="checkbox0309" class="set03_checkbox" onclick="checkbox_onclick()" value="50만원 ~ 100만원">
                                         <label for="checkbox0309">50만원 ~ 100만원</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0310" class="set03_checkbox" onclick="checkbox_onclick()" value="100만원 이상">
+                                        <input type="checkbox" name="100만원 이상" id="checkbox0310" class="set03_checkbox" onclick="checkbox_onclick()" value="100만원 이상">
                                         <label for="checkbox0310">100만원 이상</label>
                                     </li>
                                 </ul>
                             </div>
 
                             <div class="icon_tab_ct" id="grade">
-                                <!--등급별-->
+                                <!--맛 별-->
                                 <ul>
-                                    <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0401" class="set03_checkbox" onclick="checkbox_onclick()">
-                                        <label for="checkbox0401">All</label>
+                                    <li class="round_checkbox02">
+                                        <p>당도</p>   
+                                        <div class="radio_box">
+                                            <div>
+                                                <input type='radio' name='taste_sweet' value='sweet01' id="radio0101" onclick="radio_onclick()">
+                                                <label for="radio0101"></label>
+                                            </div>
+                                            <div>
+                                                <input type='radio' name='taste_sweet' value='sweet02' id="radio0102" onclick="radio_onclick()">
+                                                <label for="radio0102" ></label>
+                                            </div>
+                                            <div>
+                                                <input type='radio' name='taste_sweet' value='sweet03' id="radio0103" onclick="radio_onclick()">
+                                                <label for="radio0103"></label>
+                                            </div>
+                                            <div>
+                                                <input type='radio' name='taste_sweet' value='sweet04' id="radio0104" onclick="radio_onclick()">
+                                                <label for="radio0104"></label>
+                                            </div>
+                                            <div>
+                                                <input type='radio' name='taste_sweet' value='sweet05' id="radio0105" onclick="radio_onclick()">
+                                                <label for="radio0105" ></label>
+                                            </div>
+                                        </div>
                                     </li>
-                                    <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0402" class="set03_checkbox" onclick="checkbox_onclick()">
-                                        <label for="checkbox0402">레드와인4</label>
+                                    <li class="round_checkbox02">
+                                        <p>탄닌</p>   
+                                        <div class="radio_box">
+                                            <div>
+                                                <input type='radio' name='taste_Tannin' value='Tannin01' id="radio0201" onclick="radio_onclick()">
+                                                <label for="radio0201"></label>
+                                            </div>
+                                            <div>
+                                                <input type='radio' name='taste_Tannin' value='Tannin02' id="radio0202" onclick="radio_onclick()">
+                                                <label for="radio0202" ></label>
+                                            </div>
+                                            <div>
+                                                <input type='radio' name='taste_Tannin' value='Tannin03' id="radio0203" onclick="radio_onclick()">
+                                                <label for="radio0203"></label>
+                                            </div>
+                                            <div>
+                                                <input type='radio' name='taste_Tannin' value='Tannin04' id="radio0204" onclick="radio_onclick()">
+                                                <label for="radio0204"></label>
+                                            </div>
+                                            <div>
+                                                <input type='radio' name='taste_Tannin' value='Tannin05' id="radio0205" onclick="radio_onclick()">
+                                                <label for="radio0205" ></label>
+                                            </div>
+                                        </div>
                                     </li>
-                                    <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0403" class="set03_checkbox" onclick="checkbox_onclick()">
-                                        <label for="checkbox0403">화이트와인4</label>
+                                    <li class="round_checkbox02">
+                                        <p>산도</p>   
+                                        <div class="radio_box">
+                                            <div>
+                                                <input type='radio' name='taste_Acid' value='Acid01' id="radio0301" onclick="radio_onclick()">
+                                                <label for="radio0301"></label>
+                                            </div>
+                                            <div>
+                                                <input type='radio' name='taste_Acid' value='Acid02' id="radio0302" onclick="radio_onclick()">
+                                                <label for="radio0302" ></label>
+                                            </div>
+                                            <div>
+                                                <input type='radio' name='taste_Acid' value='Acid03' id="radio0303" onclick="radio_onclick()">
+                                                <label for="radio0303"></label>
+                                            </div>
+                                            <div>
+                                                <input type='radio' name='taste_Acid' value='Acid04' id="radio0304" onclick="radio_onclick()">
+                                                <label for="radio0304"></label>
+                                            </div>
+                                            <div>
+                                                <input type='radio' name='taste_Acid' value='Acid05' id="radio0305" onclick="radio_onclick()">
+                                                <label for="radio0305" ></label>
+                                            </div>
+                                        </div>
                                     </li>
-                                    <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0404" class="set03_checkbox" onclick="checkbox_onclick()">
-                                        <label for="checkbox0404">스파클링4</label>
+                                    <li class="round_checkbox02">
+                                        <p>바디</p>   
+                                        <div class="radio_box">
+                                            <div>
+                                                <input type='radio' name='taste_bodied' value='bodied01' id="radio0401" onclick="radio_onclick()">
+                                                <label for="radio0401"></label>
+                                            </div>
+                                            <div>
+                                                <input type='radio' name='taste_bodied' value='bodied02' id="radio0402" onclick="radio_onclick()">
+                                                <label for="radio0402" ></label>
+                                            </div>
+                                            <div>
+                                                <input type='radio' name='taste_bodied' value='bodied03' id="radio0403" onclick="radio_onclick()">
+                                                <label for="radio0403"></label>
+                                            </div>
+                                            <div>
+                                                <input type='radio' name='taste_bodied' value='bodied04' id="radio0404" onclick="radio_onclick()">
+                                                <label for="radio0404"></label>
+                                            </div>
+                                            <div>
+                                                <input type='radio' name='taste_bodied' value='bodied05' id="radio0405" onclick="radio_onclick()">
+                                                <label for="radio0405"></label>
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -346,47 +424,47 @@
                                 <!--알콜농도-->
                                 <ul>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0501" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 상관없음">
+                                        <input type="checkbox" name="알콜농도 상관없음" id="checkbox0501" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 상관없음">
                                         <label for="checkbox0501">All</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0502" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 1 ~ 3%">
+                                        <input type="checkbox" name="1 ~ 3%" id="checkbox0502" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 1 ~ 3%">
                                         <label for="checkbox0502">1 ~ 3%</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0503" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 3 ~ 5%">
+                                        <input type="checkbox" name="3 ~ 5%" id="checkbox0503" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 3 ~ 5%">
                                         <label for="checkbox0503">3 ~ 5%</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0504" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 5 ~ 7%">
+                                        <input type="checkbox" name="5 ~ 7%" id="checkbox0504" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 5 ~ 7%">
                                         <label for="checkbox0504">5 ~ 7%</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0505" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 7 ~ 9%">
+                                        <input type="checkbox" name="7 ~ 9%" id="checkbox0505" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 7 ~ 9%">
                                         <label for="checkbox0505">7 ~ 9%</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0506" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 9 ~ 11%">
+                                        <input type="checkbox" name="9 ~ 11%" id="checkbox0506" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 9 ~ 11%">
                                         <label for="checkbox0506">9 ~ 11%</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0507" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 11 ~ 13%">
+                                        <input type="checkbox" name="11 ~ 13%" id="checkbox0507" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 11 ~ 13%">
                                         <label for="checkbox0507">11 ~ 13%</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0508" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 13 ~ 15%">
+                                        <input type="checkbox" name="13 ~ 15%" id="checkbox0508" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 13 ~ 15%">
                                         <label for="checkbox0508">13 ~ 15%</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0509" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 15 ~ 17%">
+                                        <input type="checkbox" name="15 ~ 17%" id="checkbox0509" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 15 ~ 17%">
                                         <label for="checkbox0509">15 ~ 17%</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0510" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 17 ~ 19%">
+                                        <input type="checkbox" name="17 ~ 19%" id="checkbox0510" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 17 ~ 19%">
                                         <label for="checkbox0510">17 ~ 19%</label>
                                     </li>
                                     <li class="round_checkbox">
-                                        <input type="checkbox" id="checkbox0511" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 19%이상">
+                                        <input type="checkbox" name="19%이상" id="checkbox0511" class="set03_checkbox" onclick="checkbox_onclick()" value="알콜농도 19%이상">
                                         <label for="checkbox0511">19%이상</label>
                                     </li>
                                 </ul>
@@ -400,12 +478,14 @@
                         <!--결과리스트-->
                         <ul class="list_ctt"> 
                             <li id="list_ctt_tag">
+                                <!-- 삭제예정
                                 <button type="button">#프랑스<span>x</span></button>
                                 <button type="button">#3만원이하<span>x</span></button>
                                 <button type="button">#별점5점이상<span>x</span></button>
                                 <button type="button">#화이트와인<span>x</span></button>
                                 <button type="button">#화이트와인<span>x</span></button>
                                 <button type="button">#화이트와인<span>x</span></button>
+                                -->
                             </li>
                             <li>
                                 <button type="button">추천순</button>
