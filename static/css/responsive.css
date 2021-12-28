@@ -1,0 +1,38 @@
+@media screen and (max-width: 1280px) {
+    .section4_box, .slick-list, .footer_content_small_box, .slick-slide
+    {
+       width :100%
+        }
+    
+    
+}
+
+                       
+
+@media screen and (max-width: 959px) {
+    .section4_box, .slick-list, .footer_content_small_box, .slick-slide, 
+    {
+    
+     width :100%
+        }
+    
+}
+
+@media screen and (max-width: 767px) {
+    .section4_box, .slick-list, .footer_content_small_box, .slick-slide
+    
+  {
+      
+     width :100%
+        }
+    
+}
+
+@media screen and (max-width: 479px) {
+    .section4_box, .slick-list, .footer_content_small_box, .slick-slide
+  {
+      
+     width :100%
+        }
+    
+}
