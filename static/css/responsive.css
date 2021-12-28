@@ -1,5 +1,5 @@
 @media screen and (max-width: 1280px) {
-    .section4_box, .slick-list, .footer_content_small_box, .slick-slide
+    .section4_box, .slick-list, .footer_content_small_box, .slick-slide, .section4
     {
        width :100%
         }
@@ -9,8 +9,8 @@
 
                        
 
-@media screen and (max-width: 959px) {
-    .section4_box, .slick-list, .footer_content_small_box, .slick-slide, 
+@media screen and (max-width: 960px) {
+    .section4_box, .slick-list, .footer_content_small_box, .slick-slide, .section4
     {
     
      width :100%
@@ -18,8 +18,8 @@
     
 }
 
-@media screen and (max-width: 767px) {
-    .section4_box, .slick-list, .footer_content_small_box, .slick-slide
+@media screen and (max-width: 768px) {
+    .section4_box, .slick-list, .footer_content_small_box, .slick-slide, .section4
     
   {
       
@@ -29,10 +29,19 @@
 }
 
 @media screen and (max-width: 479px) {
-    .section4_box, .slick-list, .footer_content_small_box, .slick-slide
+    .section4_box, .slick-list, .footer_content_small_box, .slick-slide, .section4
   {
       
      width :100%
         }
     
+}
+
+@media screen and (max-width: 320px) {
+   .section4_box, .slick-list, .footer_content_small_box, .slick-slide, .section4
+ {
+     
+    width :100%
+       }
+   
 }

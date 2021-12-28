@@ -253,25 +253,49 @@
 				draggable : true, 	//드래그 가능 여부 
 				
 				responsive: [ // 반응형 웹 구현 옵션
-					{  
-						breakpoint: 959, //화면 사이즈 960px
+                {  
+						breakpoint: 1281, //화면 사이즈 1280px
 						settings: {
 							//위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-							slidesToShow: 3
+							slidesToShow: 4,
+                            arrows : false
+                            
+						} 
+					},
+					{  
+						breakpoint: 961, //화면 사이즈 960px
+						settings: {
+							//위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+							slidesToShow: 3,
+                            arrows : false
                             
 						} 
 					},
 					{ 
-						breakpoint: 767, //화면 사이즈 768px
+						breakpoint: 769, //화면 사이즈 768px
 						settings: {	
 							//위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-							slidesToShow: 2
+							slidesToShow: 2,
+                            arrows : false
+						} 
+					},
+
+                    { 
+						breakpoint: 481, //화면 사이즈 480px
+						settings: {	
+							//위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+							slidesToShow: 1,
+                            arrows : false
 						} 
 					}
 				]
 
 			});
   		})
+          
+
+
+          
     </script>
 
     <script src="js/make.js"></script>

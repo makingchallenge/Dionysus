@@ -107,13 +107,12 @@
 
 .section4_wine_tip {
 	width: 100%;
-	margin: auto;
+	margin: 50px auto;
 
 }
 
 .section4_tip_txt1 {
 	font-size: 22px;
-	width: 450px;
 	margin: 0 auto;
 	font-weight: bold;
 	text-align: center;
@@ -124,7 +123,7 @@
 	text-align: center;
 	font-size: 43px;
 	font-weight: bold;
-	width: 430px;
+
 	margin: 15px auto;
 
 }
@@ -154,7 +153,7 @@
 
 
 .section4_box{
-	width: 1280px;
+	width: 1400px;
 	margin: auto;
 	padding: 120px 0px 190px 0px;
 
@@ -178,14 +177,13 @@
         }
 
         .footer_content_small_box {
-            width: 1280px;
+            
             margin: auto;
         }
 
 
         .footer_content_name {
             font-size: 16px;
-            width: 300px;
             margin: auto;
             text-align: center;
         
@@ -193,7 +191,6 @@
 
         .footer_content_link {
             font-size: 16px;
-            width: 60px;
             margin: 15px auto;
             text-align: center;
 
@@ -208,7 +205,6 @@
         .footer_content_copyright {
 
             font-size: 16px;
-            width: 430px;
             margin: 30px auto;
             text-align: center;
 
@@ -260,24 +256,23 @@
 		  .slick-slide img {
 	
 			margin: auto;
-			width: 295px;
 			height: 295px;
 			display: block;
-			padding-bottom: 25px;
+			padding-bottom: 20px;
             }
 
 			
 		
 	   
 		  .slick-dots li button:before /*section4-img*/ {
-			font-size:20px;
+			font-size:30px;
 			color: gray;}
 
 
 			/*  왼 화살표 */
 			
 			.slick-prev /*section4-arrow*/{
-				left: -60px;
+				left: 5px;
 				
 			}
 			
@@ -295,7 +290,7 @@
 			
 			
 			.slick-next /*section4-arrow*/{
-				right: -45px;
+				right: 20px;
 				
 				
 			}
@@ -303,7 +298,7 @@
 				font-size: 0;
 				line-height: 0;
 				position: absolute;
-				top: 46.5%;
+				top: 46.3%;
 				display: block;
 				width: 20px;
 				height: 20px;
@@ -340,10 +335,12 @@
 				
 			}
 
+		
+
 		/* 카드 몸체 */
 
 			.slick-list /*section4-list*/{
-				width: 100%;
+				width: 1280px;
 				position: relative;
 				display: block;
 				overflow: hidden;
@@ -457,7 +454,7 @@
 				margin: 0px;
 				padding: 0px;
 				font-family: NanumSquare, sans-serif;
-				font-size: 13px;
+				font-size: 15px;
 				color: rgb(0, 0, 0);
 				text-size-adjust: none;
 				position: relative;
