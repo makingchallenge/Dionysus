@@ -49,6 +49,7 @@ function search_list( name ) {
     let search_name;
     let checkBoxNum;
     let checkBoxValue;
+    let idData;
 
     switch (name) {
         case "type": //종류
@@ -75,11 +76,13 @@ function search_list( name ) {
     let search_list = document.getElementById(name);
     search_list.innerText = '';   //검색 리스트 초기화
 
+    idData = "checkbox0" + checkBoxNum;
+
     //추가할 html & all 기본 추가
     let temphtml = `<ul>
                         <li class="round_checkbox">
-                        <input type="checkbox" id="checkbox0101" class="set03_checkbox" onclick="checkbox_onclick()" value=${checkBoxValue}>
-                        <label for="checkbox0101">All</label>
+                        <input type="checkbox" id=${idData} class="set03_checkbox" onclick="checkbox_onclick()" value="${checkBoxValue}">
+                        <label for=${idData}>All</label>
                         </li>`
 
     $.ajax({
@@ -91,7 +94,7 @@ function search_list( name ) {
 
                     for(let i = 0; i < list.length; i++) {
                         checkBoxNum += 1;
-                        let idData = "checkbox0" + checkBoxNum;
+                        idData = "checkbox0" + checkBoxNum;
                         let subhtml = `<li class="round_checkbox">
                                             <input type="checkbox" id=${idData} class="set03_checkbox" onclick="checkbox_onclick()" value="${list[i]['_id']}">
                                             <label for=${idData}>${list[i]['_id']}</label>
@@ -106,24 +109,103 @@ function search_list( name ) {
 
 
     //section03 if click the checkbox - 리스트 좌측 상단 태그 추가, 리스트 추가
-function checkbox_onclick() {
+function checkbox_onclick( click_id ) {
 
 
     var wineinfor = document.getElementById("winelist_ctw");
     wineinfor.classList.add("view_wlist");
 
-    
-    //리스트 좌측 상단 태그 추가
+    var dicSearchList = {}
+    let dicValArr = []
 
+    // > 선택된 목록에서 value 찾기
+    let result = '';
+    var list = ['type', 'country', 'price', 'concentration']
 
+    list.forEach(function (data){
+        var query = 'div[id="' + data +'"] > ul > li > input[class="set03_checkbox"]:checked';
+
+        // const query = 'div[id="type"] > ul > li > input[class="set03_checkbox"]:checked';
+        const selectedEls = document.querySelectorAll(query);
+        // let span_btn = '<span>x</span>'
+
+        // > > 반복문
+        selectedEls.forEach((el) => {
+            // result += '<button type="button"># ' + el.name + '</button>'; //+ span_btn
+            result += '<button type="button"># ' + el.value + '</button>';
+
+            dicValArr.push(el.value);
+        });
+        // console.log(data, dicValArr);
+        dicSearchList[data] = dicValArr.slice();    //배열 초기화에 영향을 받지 않는 깊은 복사
+        dicValArr.splice(0);    //배열 초기화
+    })
+
+    // > > 출력
+    document.getElementById('list_ctt_tag').innerHTML = result;
 
     //리스트 추가
-
+    setSearchList( dicSearchList )
 
 
 }
 
+function setSearchList( checkList ) {
+    $.ajax({
+        type: 'POST',
+        url: '/api/set_searchList',
+        data: JSON.stringify(checkList),
+        success: function (response) {
+            $('.list_ctc').empty()
+            let list = response['list_data'] // DB에 저장된 데이터 가져오기
 
+            console.log(list)
+
+            for (let i = 0 ; i < list.length ; i++) {
+                let img = list[i]['img']
+                let name_eng = list[i]['name_eng']
+                let name_ko = list[i]['name_ko']
+                let kind = list[i]['kind']
+                let country_img = list[i]['make_country_flag']
+                let country_name = list[i]['make_country']
+                let make = list[i]['make']
+                let food = list[i]['food']
+
+                console.log(img)
+                console.log(name_eng)
+                console.log(name_ko)
+                console.log(kind)
+                console.log(country_img)
+                console.log(country_name)
+                console.log(make)
+                console.log(food)
+
+
+                let temp_html =
+                                `<li class="content" onclick="load_wineif()">
+                                    <img src="${img}" alt="wine image" class="wine_img">
+                                    <div>
+                                        <p>${name_eng}</p>
+                                        <p>${name_ko}</p>
+                                        <ul>
+                                            <li>
+                                                <span></span><span>${kind}</span></li>
+                                            <li>
+                                                <img src="${country_img}" alt="${country_name}">
+                                                <span>${country_name}</span></li>
+                                        </ul>
+                                        <p>${make} ${food}</p>
+                                    </div>
+                                    <span class="view_btn">+</span>
+                                </li>`
+
+                $('.list_ctc').append(temp_html)
+            }
+
+
+        }
+    })
+}
 
 
     //section03 wine list
