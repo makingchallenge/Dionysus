@@ -1,13 +1,10 @@
 
 /* PC , 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
 @media all and (min-width:768px) and (max-width:1023px) {
-    
-}
-
+    }
 
 /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
 @media all and (min-width:480px) and (max-width:767px) {
-
 
     header button {
         display: block;
@@ -16,20 +13,22 @@
         float: none;
     }
 
-    header ul li:last-child{
-        display:none;
+    header ul li:last-child {
+        display: none;
     }
-
 
     header.mbsize {
         background-color: rgba(0,0,0,0.8);
-        bottom:0;
-        
+        bottom: 0;
+
     }
-    header.mbsize ul {height:100%;}
+    header.mbsize ul {
+        height: 100%;
+    }
     header.mbsize button span {
         background-color: #fff;
-        transition: .4s; -webkit-transition: .4s;
+        transition: 0.4s;
+        -webkit-transition: 0.4s;
     }
 
     header.mbsize button span:nth-child(2) {
@@ -76,72 +75,106 @@
         border-bottom: 3px solid #fff;
     }
 
-    
     header.mbsize ul li:first-child a {
         background-image: url("../images/logo03.png");
         background-size: 100px auto;
     }
 
 
-    .title_box h2 span {display:block;}
+    nav {top: initial; right: 0; left: 0; bottom: 0; height: 90px; padding:0;}
+
+    nav .swiper-button-next, nav .swiper-button-prev {display:none;}
+
+    nav ul li {margin-bottom: 0;}
 
 
 
 
 
-    .section03_mbbox .search_box .icon_tab li {width: 32%;}
-    .section03_mbbox .search_box .icon_tab li:nth-child(2),
-    .section03_mbbox .search_box .icon_tab li:nth-child(1),
-    .section03_mbbox .search_box .icon_tab li:nth-child(3) {
-        margin-bottom:2%;
+
+    .title_box h2 span {
+        display: block;
     }
-    .section03_mbbox .search_box .icon_tab li:nth-child(3) {margin-right:0;}
+
+    .section03_mbbox .search_box .icon_tab li {
+        width: 32%;
+    }
+    .section03_mbbox .search_box .icon_tab li:nth-child(1),
+    .section03_mbbox .search_box .icon_tab li:nth-child(2),
+    .section03_mbbox .search_box .icon_tab li:nth-child(3) {
+        margin-bottom: 2%;
+    }
+    .section03_mbbox .search_box .icon_tab li:nth-child(3) {
+        margin-right: 0;
+    }
     .section03_mbbox .search_box .icon_tab li:nth-child(4),
-    .section03_mbbox .search_box .icon_tab li:nth-child(5)
-     {
-         width:49%;
-     }
-     .section03_mbbox .search_box .icon_tab_ct ul li {
-        width: 48%;}
-     .section03_mbbox .search_box .icon_tab_ct ul li:nth-child(2n+0) {margin-right:0;}
+    .section03_mbbox .search_box .icon_tab li:nth-child(5) {
+        width: 49%;
+    }
+    .section03_mbbox .search_box .icon_tab_ct ul li {
+        width: 48%;
+    }
+    .section03_mbbox .search_box .icon_tab_ct ul li:nth-child(2n+0) {
+        margin-right: 0;
+    }
 
+    .section03_mbbox .search_box .icon_tab_ct ul li.round_checkbox02 {
+        margin-bottom: 25px;
+    }
 
-     .section03_mbbox .search_box .icon_tab_ct ul li.round_checkbox02 {margin-bottom:25px;}
+    .winelist_ct .list_ctc .content {
+        width: 100%;
+        margin-right: 0;
+    }
 
-     .winelist_ct .list_ctc .content {width: 100%; margin-right: 0%;}
+    
 
-    /* nav {
+    .wine_box {
+        max-height: 590px;
+        overflow-y: scroll;
+    }
+    .wine_box::-webkit-scrollbar {
         display: none;
-        position: fixed;
-        top: initial;
-        right: 0;
-        bottom: 0;
-        left: 0;}*/
-        nav#r_nav.view_rnav {display:none;}
+    }
+    .wine_box {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .wine_box img {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .wine_box .wine_inf {
+        float: none;
+        margin: 0 auto;
+        width: 95%;
+    }
+    .wine_box .wine_inf .s_tit,
+    .wine_box .wine_inf .t_tit {
+        text-align: center;
+    }
+
+    .wine_box .wine_inf .s_txt {
+        display: inline-block;
+        transform: translate(67%, 0);
+    }
 
 
-        .wine_box {max-height:590px; overflow-y: scroll;}
-.wine_box::-webkit-scrollbar {
-    display: none;
+
+
+
+    footer div {padding: 80px 0 180px;}
+    
+
+
+
+
+
+
+
+
+
+
 }
-.wine_box {
-  -ms-overflow-style: none; 
-  scrollbar-width: none; 
-}
-
-.wine_box img {float: none; margin:0 auto;
-}
-
-.wine_box .wine_inf {
-    float: none; margin:0 auto;
-    width: 95%;
-}
-.wine_box .wine_inf .s_tit, .wine_box .wine_inf .t_tit {text-align: center;}
-
-.wine_box .wine_inf .s_txt {display: inline-block;
-    transform: translate(67%, 0);}
-
-
-}
-
-

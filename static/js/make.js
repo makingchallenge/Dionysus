@@ -1,3 +1,6 @@
+
+
+
 //section02 slide
 
 var swiper = new Swiper('.section02_mbbox', {
@@ -6,9 +9,9 @@ var swiper = new Swiper('.section02_mbbox', {
     loop: true,
     //spaceBetween: 20,
     autoplay: true,
-    autoplaySpeed : 3000,   
+    autoplaySpeed : 2000,   
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination ',
       clickable: true,
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' + '</span>';
@@ -31,23 +34,52 @@ var swiper = new Swiper('.section02_mbbox', {
 
 
 
-/* right nav slide 작업중
-  var swiper2 = new Swiper('#r_nav', {
-    direction: 'vertical',
-    slidesPerView: 3,
+// right nav slide 
+var swiper2 = new Swiper('.r_nav_content', {
+    
+    slidesPerView: 4,
     loop: true,
-    autoplay: true,
+    autoplay: true, 
     centeredSlides: true,  
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    }
+    },
+    breakpoints: {
+        767: { //767 이상일 경우
+          slidesPerView: 3,
+          direction: 'vertical',
+        },}
   });
 
-*/
 
 
-
+  var swiper3 = new Swiper('.section04_content', {
+    slidesPerView: 2,
+    centeredSlides: true,
+    loop: true,
+    //spaceBetween: 20,
+    autoplay: true,
+    autoplaySpeed : 2000,   
+    pagination: {
+      el: '.swiper-pagination02',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + '</span>';
+      },
+    },
+    /*navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },*/
+    breakpoints: {
+        480: { //480 이상일 경우
+            slidesPerView: 2,
+          },
+        767: { //767 이상일 경우
+          slidesPerView: 4,
+        },}
+  });
 
 
 
@@ -69,6 +101,10 @@ function clear_checkbox() {
 
 
 }
+
+
+
+
 
 
     //section03 tab icon button
@@ -96,6 +132,9 @@ function open_Set03_tab(evt, tabName) {
 
 
 
+
+
+
     //section03 if click the checkbox - 리스트 추가
 function checkbox_onclick() {
     var wineinfor = document.getElementById("winelist_ctw");
@@ -117,6 +156,15 @@ function checkbox_onclick() {
     document.getElementById('list_ctt_tag').innerHTML = result; 
 
 }
+
+
+
+
+
+
+
+
+
 
 //section03 if click the radio - 리스트 추가
 function radio_onclick() {
@@ -169,14 +217,48 @@ function load_wineif() {
 
 
 
-
-
-    //우측 네비 와인 정보 추가 / 1. slide 미 작업한 상태 / 2. slide 작업 시 내용 추가 sciprt 부분 작업
     var wineinfor = document.getElementById("r_nav");
     wineinfor.classList.add("view_rnav");
 
+    //swiper2.removeAllSlides();
+    //swiper2.appendSlide();
+    
 
+    /*우측 네비 와인 정보 추가
+    var r_nav_list = document.getElementById("r_nav_list");
+    const li_tag = document.createElement('li');
+    const img_tag = document.createElement('img');
 
+    li_tag.setAttribute('class','swiper-slide');
+    li_tag.setAttribute('onclick','load_wineif()');
+
+    img_tag.setAttribute('src','');
+    img_tag.setAttribute('alt','와인이름');
+    r_nav_list.append(li_tag);
+    li_tag.append(img_tag);
+    
+    swiper2.update(); 
+    */
+    /* 참고
+    var data={ 'sample':'sample data' } 
+    swiperContainer.removeAllSlides(); 
+    $.ajax({ type:'post',
+            data:data, 
+            url:'요청할 url', 
+            dataType:'json', 
+            success:function(data){ 
+                    var length = data.length; 
+                    var htmlArr=[]; 
+     
+                    for(var i=0;i<length;i++){ 
+                    htmlArr.push("<div class=\"swiper-slide\">data.sample</div>");
+                    }
+
+            swiperContainer.appendSlide(htmlArr);
+            swiperContainer.update();  //슬라이드를 새로 추가할 경우 꼭 update 함수를 호출하는게 좋다
+                }
+            })
+ */
 }
 
 
@@ -238,5 +320,3 @@ function open_mobilemu() {
     mhead_size.setAttribute("onclick", "close_mobilemu()");
     mhead_size02.setAttribute("onclick", "close_mobilemu()");
 }
-
-
