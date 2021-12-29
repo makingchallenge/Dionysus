@@ -81,6 +81,7 @@ header {
     right: 0;
     background-color: rgba(255,255,255,0.8);
     z-index: 999;
+    transition: .4s; -webkit-transition: .4s;
 }
 
 header ul {
@@ -123,6 +124,32 @@ header ul li:last-child a:first-child {
     margin-left: 0;
 }
 
+header button {
+    width: 65px;
+    height: 65px;
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 17px;
+    cursor: pointer;
+    display:none;
+}
+
+header button span {
+    width: 100%;
+    display: block;
+    height: 5px;
+    background-color: #860303;
+    margin-bottom: 6px;
+    border-radius: 3px;
+}
+
+header button span:last-child {
+    margin-bottom: 0;
+}
+
 /*nav*/
 nav { 
     display:none;
@@ -136,11 +163,14 @@ nav {
 nav#r_nav.view_rnav{
     display:block; 
 }
-nav ul {
+nav ul.swiper-wrapper {
     width: 100px;
+    height:auto;
     position: relative;
     overflow: hidden;
 }
+
+
 nav ul li {
     width: 90px;
     margin: 0 auto;
@@ -217,11 +247,13 @@ nav ul li button:hover {
     background-image: url("../images/section01_bg.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 .section01_content img {
     display: block;
     margin: 309px auto;
     max-width: 543px;
+    width:70%;
 }
 
 
@@ -240,23 +272,24 @@ nav ul li button:hover {
 }
 
 .section02_content .section02_mbbox {
-	max-width:1280px; margin:0 auto; padding:130px 0; position:relative;
+	max-width:1280px; width:95%; margin:0 auto; padding:130px 0 175px; position:relative;
 	overflow:hidden;
 }
 
 .section02_mbbox .set02_slidebox {
     position: relative;
-    width: 1130px;
+    max-width: 1130px;
+    width:95%;
 	margin:0 auto;
 }
 .section02_mbbox .set02_slidebox li {
-    width: 260px;
+    width: 23.5%;
     padding: 30px 0 20px;
     position: relative;
     box-shadow: 0 0 15px rgba(0,0,0,10%);
     border-radius: 10px;
 	float:left;
-	margin-right:30px;
+	margin-right:2%;
 	border:2px solid #fff;
 	box-sizing: border-box;
 	cursor: pointer;
@@ -324,7 +357,27 @@ nav ul li button:hover {
 }
 
 
+.section02_content .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.section02_content .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap,11px);
+}
 
+.section02_content .swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,12px));
+    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,12px));
+}
+
+
+.section02_content .swiper-pagination-bullet-active {
+    background: #860303;
+}
+
+.section02_content .swiper-horizontal > .swiper-pagination-bullets,
+.section02_content .swiper-pagination-bullets.swiper-pagination-horizontal,
+.section02_content .swiper-pagination-custom,
+.section02_content .swiper-pagination-fraction {
+    bottom: 125px;
+}
 
 
 /*section03*/
@@ -340,15 +393,15 @@ nav ul li button:hover {
 }
 
 .section03_content .section03_mbbox {
-	max-width:1280px; margin:0 auto; padding:130px 0; position: relative;
+	max-width:1280px; width:95%; margin:0 auto; padding:130px 0; position: relative;
     overflow: hidden;
 }
 .section03_mbbox .search_box .icon_tab {margin-bottom:40px; position:relative; overflow:hidden;}
 
 .section03_mbbox .search_box .icon_tab li {
-	width:220px; padding:150px 0 45px; float:left;
+	width:18.4%; padding:150px 0 45px; float:left;
 	background-color:#fff;
-	margin-right:45px;
+	margin-right:2%;
 	border-radius: 13px;
 	text-align: center;
 	
@@ -506,11 +559,17 @@ nav ul li button:hover {
 }
 
 
-
+.section03_mbbox .search_box .icon_tab_ct#grade ul {padding-top:20px;}
 .round_checkbox02 p {font-size: 16px; font-weight: bold; font-family: 'LotteMartDream', sans-serif;}
-.round_checkbox02 .radio_box {position:relative; overflow:hidden; margin-top:20px; width: 80%;}
+.round_checkbox02 .radio_box {position:relative; overflow:hidden; margin-top:20px;}
 .round_checkbox02 .radio_box div {width:20%; float:left;}
 .round_checkbox02 .radio_box div input[type="radio"] {visibility: hidden;}
+
+.section03_mbbox .search_box .icon_tab_ct ul li.round_checkbox02 {
+    padding:10px 2%; background-color:#fff; box-sizing: border-box; border-radius: 10px;
+}
+
+
 
 .section03_mbbox .search_box .icon_tab_ct ul li.round_checkbox02 .radio_box div label {
     
@@ -602,6 +661,7 @@ nav ul li button:hover {
 .winelist_ct .list_ctt li:first-child {
     float: left;
     max-width: 800px;
+    width: calc(100% - 240px);
 }
 .winelist_ct .list_ctt li:last-child {
     position: absolute;
@@ -671,7 +731,7 @@ nav ul li button:hover {
     background-color: #fff;
     border-radius: 10px;
     border: 2px solid #fff;
-    padding: 45px 0;
+    padding: 45px 2%;
     box-sizing: border-box;
     margin-bottom: 2%;
     position: relative;
@@ -686,12 +746,13 @@ nav ul li button:hover {
 .winelist_ct .list_ctc .content .wine_img {
     display: block;
     float: left;
-    padding: 0 30px 0 50px;
-    width:100px;
+    margin: 0 5% 0 2%;
+    width: 99px;
 }
 .winelist_ct .list_ctc .content div {
     float: left;
-    width: 375px;
+    max-width: 432px;
+    width: calc(100% - 99px - 12%);
     padding: 15px 0;
 }
 .winelist_ct .list_ctc .content div p:nth-child(1) {
@@ -769,10 +830,11 @@ nav ul li button:hover {
 
 
 
-/*section04*/
+/*section04
 
 .section04_content {
     max-width: 1280px;
+    width:95%;
     margin: 0 auto;
     padding: 130px 0;
     position: relative;
@@ -800,8 +862,8 @@ nav ul li button:hover {
     margin-bottom: 0;
 }
 
-
-/*footer*/
+*/
+/*footer
 
 footer {
     width: 100%;
@@ -840,7 +902,405 @@ footer div .work_notion {
 }
 
 
+*/
 
+
+
+
+
+
+
+/*section04*/
+
+.section4_wine_tip {
+	width: 100%;
+	margin: 50px auto;
+
+}
+
+.section4_tip_txt1 {
+	font-size: 22px;
+	margin: 0 auto;
+	font-weight: bold;
+	text-align: center;
+
+}
+
+.section4_tip_txt2 {
+	text-align: center;
+	font-size: 43px;
+	font-weight: bold;
+
+	margin: 15px auto;
+
+}
+	
+
+.section4_tip_red{
+	color: #880b0b
+}
+
+
+
+
+
+.section4_comma {
+	width: 100%;
+	
+
+}
+
+.section4_comma img{
+	margin: 30px auto;
+	display: block;
+
+	
+
+}
+
+
+.section4_box{
+	width: 1400px;
+	margin: auto;
+	padding: 120px 0px 190px 0px;
+
+
+}
+
+
+
+
+/*footer*/
+
+  .footer_content {
+            font-size: 16px;
+
+            color: white;
+
+            max-width: 100%;
+            padding: 100px 0 100px 0;
+
+            background-color: #880b0b;
+        }
+
+        .footer_content_small_box {
+            
+            margin: auto;
+        }
+
+
+        .footer_content_name {
+            font-size: 16px;
+            margin: auto;
+            text-align: center;
+        
+        }
+
+        .footer_content_link {
+            font-size: 16px;
+            margin: 15px auto;
+            text-align: center;
+
+        }
+
+        .footer_content_name_spacing {
+            word-spacing: 13px;
+			
+        }
+
+
+        .footer_content_copyright {
+
+            font-size: 16px;
+            margin: 30px auto;
+            text-align: center;
+
+        }
+
+        .footer_logo {
+            width: 100%;
+        
+
+
+        }
+
+     .footer_logo img{
+        height: 80px; 
+        width: 160px;
+		 display: block;
+		 margin: 20px auto;
+    
+        }
+
+
+
+		/*Swiper*/
+
+        
+
+		  .section4{
+			width: 100%;
+			margin: 0 auto;
+		  }
+		  
+		  .section4-img{
+			width: 100%;
+			margin: auto;
+			
+		  }
+
+		
+
+		  .slick-slide /*section4-img*/{
+		
+			display: block;  
+			width: 100%;
+			
+				
+			
+		  }
+
+		  .slick-slide img {
+	
+			margin: auto;
+			height: 295px;
+			display: block;
+			padding-bottom: 20px;
+            }
+
+			
+		
+	   
+		  .slick-dots li button:before /*section4-img*/ {
+			font-size:30px;
+			color: gray;}
+
+
+			/*  왼 화살표 */
+			
+			.slick-prev /*section4-arrow*/{
+				left: 5px;
+				
+			}
+			
+
+			
+			.slick-prev:before /*section4-arrow*/{
+				content: url(/static/images/section4-left-arrow.png);
+				
+			}
+
+
+			
+	   
+			 /* 오 화살표*/
+			
+			
+			.slick-next /*section4-arrow*/{
+				right: 20px;
+				
+				
+			}
+			.slick-prev, .slick-next /*section4-arrow*/{
+				font-size: 0;
+				line-height: 0;
+				position: absolute;
+				top: 46.3%;
+				display: block;
+				width: 20px;
+				height: 20px;
+				padding: 0;
+				-webkit-transform: translate(0, -50%);
+				-ms-transform: translate(0, -50%);
+				transform: translate(0, -50%);
+				cursor: pointer;
+				color: transparent;
+				border: none;
+				outline: none;
+				background: transparent;
+			
+				
+			}
+			button /*section4-arrow*/{
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			
+			.slick-next:before /*section4-arrow*/{
+				content: url(/static/images/section4-right-arrow\ .png);
+	
+			}
+			.slick-prev:before, .slick-next:before /*section4-arrow*/{
+				font-family: 'slick';
+				font-size: 40px;
+				line-height: 1;
+				opacity: .75;
+				color: white;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				
+			}
+
+		
+
+		/* 카드 몸체 */
+
+			.slick-list /*section4-list*/{
+				width: 1280px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				margin: auto;
+				
+			}
+			
+			div /*section4-list*/{
+				display: block;
+			}
+			.slick-slider /*section4-list*/{
+				position: relative;
+				display: block;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				-webkit-touch-callout: none;
+				-khtml-user-select: none;
+				-ms-touch-action: pan-y;
+				touch-action: pan-y;
+				-webkit-tap-highlight-color: transparent;
+				
+			}
+
+
+		/*슬라이드 몸통*/
+			
+
+			.section4-slide.slick-slider .slick-track, .slick-slider .slick-list {
+				-webkit-transform: translate3d(0,0,0);
+				-moz-transform: translate3d(0,0,0);
+				-ms-transform: translate3d(0,0,0);
+				-o-transform: translate3d(0,0,0);
+				transform: translate3d(0,0,0);
+			}
+
+			.section4-slide.slick-list {
+				width: 100%;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				margin: auto;
+				padding: 0px;
+			}
+		
+
+			/*하단 버튼*/
+			.slick-dots /*section4-dots*/ {
+				position: absolute;
+				bottom: -25px;
+				display: block;
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+				list-style: none;
+				text-align: center;
+			}
+
+		
+
+			ol, ul, li /*section4-dots*/{
+				list-style: none;
+			}
+
+			dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote/*section4-dots*/ {
+				margin: 0px;
+				padding: 0px;
+				text-size-adjust: none;
+			}
+
+			ul /*section4-dots*/{
+				display: block;
+				list-style-type: disc;
+				margin-block-start: 1em;
+				margin-block-end: 1em;
+				margin-inline-start: 0px;
+				margin-inline-end: 0px;
+				padding-inline-start: 40px;
+			}
+
+			.slick-slider /*section4-dots*/{
+				position: relative;
+				display: block;
+				box-sizing: border-box;
+				user-select: none;
+				touch-action: pan-y;
+				-webkit-tap-highlight-color: transparent;
+			}
+			
+		
+
+			.slick-slider /*section4-dots*/{
+				position: relative;
+				display: block;
+				box-sizing: border-box;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				-webkit-touch-callout: none;
+				-khtml-user-select: none;
+				-ms-touch-action: pan-y;
+				touch-action: pan-y;
+				-webkit-tap-highlight-color: transparent;
+			}
+
+			html, body /*section4-dots*/{
+				margin: 0px;
+				padding: 0px;
+				font-family: NanumSquare, sans-serif;
+				font-size: 15px;
+				color: rgb(0, 0, 0);
+				text-size-adjust: none;
+				position: relative;
+				line-height: 1.2;
+				background-color: rgb(255, 255, 255);
+				scroll-behavior: smooth;
+			}
+
+			.section4 .slick-dots li button::before /*section4-dots*/{
+				font-size: 50px;
+				color: gray;
+			}
+
+			.slick-dots li button:before /*section4-dots*/{
+				font-family: 'slick';
+				font-size: 6px;
+				line-height: 20px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 20px;
+				height: 20px;
+				content: '•';
+				text-align: center;
+				opacity: .25;
+				color: black;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+		
+			/*여기서 이제 css 수정하면 되여*/
+
+
+
+
+
+
+
+            
 
 
 
@@ -872,7 +1332,8 @@ footer div .work_notion {
     top: 50%;
     left: 50%;
     background-color: #fefefe;
-    width: 800px;
+    max-width: 800px;
+    width: 95%;
     -webkit-animation-name: slideIn;
     -webkit-animation-duration: 0.4s;
     animation-name: slideIn;

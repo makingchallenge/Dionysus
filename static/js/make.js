@@ -1,4 +1,57 @@
-    //section03 reset the check box
+//section02 slide
+
+var swiper = new Swiper('.section02_mbbox', {
+    slidesPerView: 1,
+    centeredSlides: true,
+    loop: true,
+    //spaceBetween: 20,
+    autoplay: true,
+    autoplaySpeed : 3000,   
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + '</span>';
+      },
+    },
+    /*navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },*/
+    breakpoints: {
+        480: { //480 이상일 경우
+            slidesPerView: 2,
+          },
+        767: { //767 이상일 경우
+          slidesPerView: 4,
+        },}
+  });
+
+
+
+
+
+/* right nav slide 작업중
+  var swiper2 = new Swiper('#r_nav', {
+    direction: 'vertical',
+    slidesPerView: 3,
+    loop: true,
+    autoplay: true,
+    centeredSlides: true,  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+
+*/
+
+
+
+
+
+
+//section03 reset the check box
 function clear_checkbox() {
     var obj = document.getElementsByClassName('set03_checkbox');
 
@@ -146,5 +199,44 @@ window.onclick = function (event) {
 }
     
 
+
+
+
+
+
+
+
+
+
+
+// mobile
+
+var mb_openbtn = document.getElementById("mb_openbtn");
+var header = document.getElementById("headct");
+var mhead_size = document.getElementById("mhead_size");
+var mhead_size02 = document.getElementById("mhead_size02");
+
+
+    
+function close_mobilemu() {
+
+    
+    mb_openbtn.setAttribute("onclick", "open_mobilemu()");
+    header.classList.remove("mbsize");
+    mhead_size.classList.remove("mbsize02");
+    mhead_size.removeAttribute('onclick');
+    mhead_size02.removeAttribute('onclick');
+    
+}
+
+
+function open_mobilemu() {    
+    
+    mb_openbtn.setAttribute("onclick", "close_mobilemu()");
+    header.classList.add("mbsize");
+    mhead_size.classList.add("mbsize02");
+    mhead_size.setAttribute("onclick", "close_mobilemu()");
+    mhead_size02.setAttribute("onclick", "close_mobilemu()");
+}
 
 
