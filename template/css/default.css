@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/naumsquare.css');
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+@font-face {
+    font-family: 'LotteMartDream';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'LotteMartDream';
+    font-style: normal;
+    font-weight: 700;
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'LotteMartDream';
+    font-style: normal;
+    font-weight: 300;
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+  }
+  
+
+
+
+
+/* reset */
+	html,body {margin:0; padding:0; font-family:'NanumSquare', sans-serif; font-size:13px; color:#000; -webkit-text-size-adjust:none; position:relative; line-height:1.2; background-color:#fff; scroll-behavior: smooth; }
+
+	dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote {margin:0; padding:0; -webkit-text-size-adjust:none;}
+	th,td,input,textarea,select {font-size:13px; color:#000; font-family:'NanumSquare', sans-serif; -webkit-text-size-adjust:none;}
+	th,td {word-break:break-all; word-wrap:break-word; -webkit-text-size-adjust:none;}
+	table {border-spacing:0; border-collapse:collapse; -webkit-text-size-adjust:none; border:0; table-layout:fixed;}
+	address,caption,cite,code,dfn,var {font-style:normal; font-weight:normal; -webkit-text-size-adjust:none;}
+	em {font-style:inherit; -webkit-text-size-adjust:none;}
+	ol,ul,li {list-style:none;}
+	h1,h2,h3,h4,h5,h6 {font-size:100%; font-weight:normal;}
+	abbr,acronym {border:0;}
+	hr,legend,caption {visibility:hidden; overflow:hidden; line-height:0; width:0; height:0; margin:0; padding:0;}
+	img,fieldset {border:0 none;}
+	label {cursor:pointer;}
+	a {color:inherit;}
+	a:link, a:visited, a:hover {text-decoration:none;}
+	a:active {text-decoration:none;}
+	input,img {vertical-align:middle;}
+    button{padding:0; margin:0; box-sizing: border-box;}
+
+	input::-webkit-input-placeholder {color:#aaa;} /* webkit */
+	input:-moz-placeholder {color:#aaa;} /* Firefox 4-18 */
+	input::-moz-placeholder {color:#aaa;} /* Firefox 19+ */
+	input:-ms-input-placeholder {color:#aaa;} /* IE10+ */
+	textarea::-webkit-input-placeholder {color:#aaa;} /* webkit */
+	textarea:-moz-placeholder {color:#aaa;} /* Firefox 4-18 */
+	textarea::-moz-placeholder {color:#aaa;} /* Firefox 19+ */
+	textarea:-ms-input-placeholder {color:#aaa;} /* IE10+ */
+
+
+    .lottemartdream {font-family: 'LotteMartDream', sans-serif;}
+	
+
+
+
+/* header */
+
+
+
+
+
+
+
+/*nav*/
+
+
+
+
+
+
+/*section01*/
+
+
+
+
+
+
+/*section02*/
+
+
+
+
+
+
+/*section03*/
+
+
+
+
+
+
+/*section04*/
+
+
+
+
+
+
+/*footer*/
