@@ -1043,7 +1043,7 @@ footer div .work_notion {
 			margin: 0 auto;
 		  }
 		  
-		  .section4-img{
+          .section4 .section4-img{
 			width: 100%;
 			margin: auto;
 			
@@ -1051,7 +1051,7 @@ footer div .work_notion {
 
 		
 
-		  .slick-slide /*section4-img*/{
+		  .section4 .slick-slide /*section4-img*/{
 		
 			display: block;  
 			width: 100%;
@@ -1060,7 +1060,7 @@ footer div .work_notion {
 			
 		  }
 
-		  .slick-slide img {
+		  .section4 .slick-slide img {
 	
 			margin: auto;
 			height: 295px;
@@ -1071,21 +1071,21 @@ footer div .work_notion {
 			
 		
 	   
-		  .slick-dots li button:before /*section4-img*/ {
+            .section4 .slick-dots li button:before /*section4-img*/ {
 			font-size:30px;
 			color: gray;}
 
 
 			/*  왼 화살표 */
 			
-			.slick-prev /*section4-arrow*/{
+			.section4 .slick-prev /*section4-arrow*/{
 				left: 5px;
 				
 			}
 			
 
 			
-			.slick-prev:before /*section4-arrow*/{
+			.section4 .slick-prev:before /*section4-arrow*/{
 				content: url(/static/images/section4-left-arrow.png);
 				
 			}
@@ -1096,12 +1096,12 @@ footer div .work_notion {
 			 /* 오 화살표*/
 			
 			
-			.slick-next /*section4-arrow*/{
+             .section4 .slick-next /*section4-arrow*/{
 				right: 20px;
 				
 				
 			}
-			.slick-prev, .slick-next /*section4-arrow*/{
+			.section4 .slick-prev, .section4 .slick-next /*section4-arrow*/{
 				font-size: 0;
 				line-height: 0;
 				position: absolute;
@@ -1121,17 +1121,17 @@ footer div .work_notion {
 			
 				
 			}
-			button /*section4-arrow*/{
+			.section4 button /*section4-arrow*/{
 				padding: 0;
 				margin: 0;
 				box-sizing: border-box;
 			}
 			
-			.slick-next:before /*section4-arrow*/{
+			.section4 .slick-next:before /*section4-arrow*/{
 				content: url(/static/images/section4-right-arrow\ .png);
 	
 			}
-			.slick-prev:before, .slick-next:before /*section4-arrow*/{
+			.section4 .slick-prev:before, .section4 .slick-next:before /*section4-arrow*/{
 				font-family: 'slick';
 				font-size: 40px;
 				line-height: 1;
@@ -1146,7 +1146,7 @@ footer div .work_notion {
 
 		/* 카드 몸체 */
 
-			.slick-list /*section4-list*/{
+        .section4 .slick-list /*section4-list*/{
 				width: 1280px;
 				position: relative;
 				display: block;
@@ -1155,10 +1155,10 @@ footer div .work_notion {
 				
 			}
 			
-			div /*section4-list*/{
+			.section4 div /*section4-list*/{
 				display: block;
 			}
-			.slick-slider /*section4-list*/{
+			.section4 .slick-slider /*section4-list*/{
 				position: relative;
 				display: block;
 				-moz-box-sizing: border-box;
@@ -1179,7 +1179,7 @@ footer div .work_notion {
 		/*슬라이드 몸통*/
 			
 
-			.section4-slide.slick-slider .slick-track, .slick-slider .slick-list {
+			.section4-slide.slick-slider .slick-track,.section4  .slick-slider .slick-list {
 				-webkit-transform: translate3d(0,0,0);
 				-moz-transform: translate3d(0,0,0);
 				-ms-transform: translate3d(0,0,0);
@@ -1198,7 +1198,7 @@ footer div .work_notion {
 		
 
 			/*하단 버튼*/
-			.slick-dots /*section4-dots*/ {
+			.section4 .slick-dots /*section4-dots*/ {
 				position: absolute;
 				bottom: -25px;
 				display: block;
@@ -1211,17 +1211,18 @@ footer div .work_notion {
 
 		
 
-			ol, ul, li /*section4-dots*/{
+            .section4 	ol,.section4  ul,.section4 li /*section4-dots*/{
 				list-style: none;
 			}
 
-			dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote/*section4-dots*/ {
+			.section4 dl,.section4  dt,.section4  dd,.section4  ul,.section4  ol,.section4  li,.section4  h1, .section4 h2, 
+            .section4 h3,.section4  h4,.section4  h5,.section4  h6,.section4  pre,.section4  form,.section4  fieldset,.section4  input,.section4  textarea,.section4  p,.section4  blockquote/*section4-dots*/ {
 				margin: 0px;
 				padding: 0px;
 				text-size-adjust: none;
 			}
 
-			ul /*section4-dots*/{
+			.section4 ul /*section4-dots*/{
 				display: block;
 				list-style-type: disc;
 				margin-block-start: 1em;
@@ -1231,7 +1232,7 @@ footer div .work_notion {
 				padding-inline-start: 40px;
 			}
 
-			.slick-slider /*section4-dots*/{
+			.section4 .slick-slider /*section4-dots*/{
 				position: relative;
 				display: block;
 				box-sizing: border-box;
@@ -1242,7 +1243,7 @@ footer div .work_notion {
 			
 		
 
-			.slick-slider /*section4-dots*/{
+			.section4 .slick-slider /*section4-dots*/{
 				position: relative;
 				display: block;
 				box-sizing: border-box;
@@ -1257,25 +1258,13 @@ footer div .work_notion {
 				-webkit-tap-highlight-color: transparent;
 			}
 
-			html, body /*section4-dots*/{
-				margin: 0px;
-				padding: 0px;
-				font-family: NanumSquare, sans-serif;
-				font-size: 15px;
-				color: rgb(0, 0, 0);
-				text-size-adjust: none;
-				position: relative;
-				line-height: 1.2;
-				background-color: rgb(255, 255, 255);
-				scroll-behavior: smooth;
-			}
 
 			.section4 .slick-dots li button::before /*section4-dots*/{
 				font-size: 50px;
 				color: gray;
 			}
 
-			.slick-dots li button:before /*section4-dots*/{
+			.section4 .slick-dots li button:before /*section4-dots*/{
 				font-family: 'slick';
 				font-size: 6px;
 				line-height: 20px;
