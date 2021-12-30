@@ -17,14 +17,36 @@
   }
 
   .header {
-    height: 230px;
+    height: 250px;
     flex: unset;
+    display: inherit;
   }
 
   .nav {
-    /*튜터님과 상의후*/
+   display: initial;
+   justify-content: normal;
   }
 
   .nav > li {
-    /*튜터님과 상의후*/
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+  margin: 0 30px 0 84px;
+
+  
+}
+
+
+@media screen and (max-width: 600px) {
+  .intro_logo {
+    width: 200px;
+  }
+ 
+  .mention {
+    font-size: 18px ;
+  }
+
+  .wine_color {
+    display: block;
+  }
 }
