@@ -116,17 +116,37 @@
 	margin: 0 auto;
 	font-weight: bold;
 	text-align: center;
-
+	line-height: 148%;
+	display: block;
+	
 }
+
+.section4_tip_txt2 span {
+	
+	white-space: nowrap;
+	
+}
+
 
 .section4_tip_txt2 {
 	text-align: center;
 	font-size: 43px;
 	font-weight: bold;
+	
+	margin: 10px auto;
+	display: block;
 
-	margin: 15px auto;
+
 
 }
+
+.section4_tip_txt1 span {
+	
+	white-space: nowrap;
+	
+}
+
+
 	
 
 .section4_tip_red{
@@ -244,7 +264,7 @@
 
 		
 
-		  .slick-slide /*section4-img*/{
+		  .section4 .slick-slide /*section4-img*/{
 		
 			display: block;  
 			width: 100%;
@@ -253,32 +273,34 @@
 			
 		  }
 
-		  .slick-slide img {
+		  .section4 .slick-slide img {
 	
 			margin: auto;
-			height: 295px;
+			width: 90%;
 			display: block;
-			padding-bottom: 20px;
+			padding-bottom: 20px;/* 이 아이를 빼라하셨는데 width값 조절하니까 괜찮아 보이더라구요 
+									(안넣으면 웹화면에서는 밑에가 너무 붙기도해서) 
+									혹시나 유나님이 보기에 이상하다 싶으면 수정하겠습니다!*/
             }
 
 			
 		
 	   
-		  .slick-dots li button:before /*section4-img*/ {
+			.section4  .slick-dots li button:before /*section4-img*/ {
 			font-size:30px;
 			color: gray;}
 
 
 			/*  왼 화살표 */
 			
-			.slick-prev /*section4-arrow*/{
+			.section4 .slick-prev /*section4-arrow*/{
 				left: 5px;
 				
 			}
 			
 
 			
-			.slick-prev:before /*section4-arrow*/{
+			.section4 .slick-prev:before /*section4-arrow*/{
 				content: url(/static/images/section4-left-arrow.png);
 				
 			}
@@ -289,12 +311,12 @@
 			 /* 오 화살표*/
 			
 			
-			.slick-next /*section4-arrow*/{
+			 .section4 .slick-next /*section4-arrow*/{
 				right: 20px;
 				
 				
 			}
-			.slick-prev, .slick-next /*section4-arrow*/{
+			.section4 .slick-prev, .slick-next /*section4-arrow*/{
 				font-size: 0;
 				line-height: 0;
 				position: absolute;
@@ -314,17 +336,17 @@
 			
 				
 			}
-			button /*section4-arrow*/{
+			.section4 button /*section4-arrow*/{
 				padding: 0;
 				margin: 0;
 				box-sizing: border-box;
 			}
 			
-			.slick-next:before /*section4-arrow*/{
+			.section4 .slick-next:before /*section4-arrow*/{
 				content: url(/static/images/section4-right-arrow\ .png);
 	
 			}
-			.slick-prev:before, .slick-next:before /*section4-arrow*/{
+			.section4 .slick-prev:before, .slick-next:before /*section4-arrow*/{
 				font-family: 'slick';
 				font-size: 40px;
 				line-height: 1;
@@ -339,7 +361,7 @@
 
 		/* 카드 몸체 */
 
-			.slick-list /*section4-list*/{
+			.section4 .slick-list /*section4-list*/{
 				width: 1280px;
 				position: relative;
 				display: block;
@@ -348,10 +370,8 @@
 				
 			}
 			
-			div /*section4-list*/{
-				display: block;
-			}
-			.slick-slider /*section4-list*/{
+			
+			.section4 .slick-slider /*section4-list*/{
 				position: relative;
 				display: block;
 				-moz-box-sizing: border-box;
@@ -367,31 +387,13 @@
 				-webkit-tap-highlight-color: transparent;
 				
 			}
-
-
-		/*슬라이드 몸통*/
 			
 
-			.section4-slide.slick-slider .slick-track, .slick-slider .slick-list {
-				-webkit-transform: translate3d(0,0,0);
-				-moz-transform: translate3d(0,0,0);
-				-ms-transform: translate3d(0,0,0);
-				-o-transform: translate3d(0,0,0);
-				transform: translate3d(0,0,0);
-			}
-
-			.section4-slide.slick-list {
-				width: 100%;
-				position: relative;
-				display: block;
-				overflow: hidden;
-				margin: auto;
-				padding: 0px;
-			}
+		
 		
 
 			/*하단 버튼*/
-			.slick-dots /*section4-dots*/ {
+			.section4 .slick-dots  {
 				position: absolute;
 				bottom: -25px;
 				display: block;
@@ -402,40 +404,12 @@
 				text-align: center;
 			}
 
-		
-
-			ol, ul, li /*section4-dots*/{
-				list-style: none;
-			}
-
-			dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote/*section4-dots*/ {
-				margin: 0px;
-				padding: 0px;
-				text-size-adjust: none;
-			}
-
-			ul /*section4-dots*/{
-				display: block;
-				list-style-type: disc;
-				margin-block-start: 1em;
-				margin-block-end: 1em;
-				margin-inline-start: 0px;
-				margin-inline-end: 0px;
-				padding-inline-start: 40px;
-			}
-
-			.slick-slider /*section4-dots*/{
-				position: relative;
-				display: block;
-				box-sizing: border-box;
-				user-select: none;
-				touch-action: pan-y;
-				-webkit-tap-highlight-color: transparent;
-			}
+	
+			
 			
 		
 
-			.slick-slider /*section4-dots*/{
+			.section4 .slick-slider {
 				position: relative;
 				display: block;
 				box-sizing: border-box;
@@ -450,25 +424,13 @@
 				-webkit-tap-highlight-color: transparent;
 			}
 
-			html, body /*section4-dots*/{
-				margin: 0px;
-				padding: 0px;
-				font-family: NanumSquare, sans-serif;
-				font-size: 15px;
-				color: rgb(0, 0, 0);
-				text-size-adjust: none;
-				position: relative;
-				line-height: 1.2;
-				background-color: rgb(255, 255, 255);
-				scroll-behavior: smooth;
-			}
-
-			.section4 .slick-dots li button::before /*section4-dots*/{
+	
+			.section4 .slick-dots li button::before {
 				font-size: 50px;
 				color: gray;
 			}
 
-			.slick-dots li button:before /*section4-dots*/{
+			.slick-dots li button:before /*이 친구가 안먹어요*/{
 				font-family: 'slick';
 				font-size: 6px;
 				line-height: 20px;
