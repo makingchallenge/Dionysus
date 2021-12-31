@@ -1,4 +1,12 @@
-    //section03 reset the check box
+//부팅시 시작
+$(document).ready(function () {
+    //검색 조건 list 불러오기
+    search_list("type")
+    search_list("country")
+    search_list("concentration")
+});
+
+//section03 reset the check box
 function clear_checkbox() {
     var obj = document.getElementsByClassName('set03_checkbox');
 
@@ -8,10 +16,11 @@ function clear_checkbox() {
 
 
     //리스트 리셋 + 리스트 숨기기
-
+    $('.list_ctc').empty()  //리스트 리셋
+    document.getElementById("winelist_ctw").style.display = "none";
 
     //리스트 상단 태그 리셋
-
+    document.getElementById('list_ctt_tag').innerHTML = '';
 
 
 
@@ -21,9 +30,6 @@ function clear_checkbox() {
     //section03 tab icon button
 function open_Set03_tab(evt, tabName) {
     var i, icon_tab_ct, set03_linik;
-
-    //검색 조건 DB 연동
-    search_list( tabName );
     
     icon_tab_ct = document.getElementsByClassName("icon_tab_ct");
     
@@ -63,9 +69,9 @@ function search_list( name ) {
             checkBoxValue = "국가 모두"
             break;
         case "price":   //가격대
-            return;
+            return; //변경 없음
         case "grade": //등급
-            return;
+            return; //변경 없음
         case "concentration": //알콜
             search_name = "$alcohol";
             checkBoxNum = 501;
@@ -109,79 +115,106 @@ function search_list( name ) {
 
 
     //section03 if click the checkbox - 리스트 좌측 상단 태그 추가, 리스트 추가
-function checkbox_onclick( click_id ) {
-
-
+function checkbox_onclick() {
     var wineinfor = document.getElementById("winelist_ctw");
     wineinfor.classList.add("view_wlist");
-
+    // Back 전송용 딕셔너리 생성
     var dicSearchList = {}
     let dicValArr = []
 
     // > 선택된 목록에서 value 찾기
     let result = '';
     var list = ['type', 'country', 'price', 'concentration']
+    // 선택 개수 확인 -> 수동으로 전체 선택 해제시 사용
+    let cnt = 0;
 
     list.forEach(function (data){
         var query = 'div[id="' + data +'"] > ul > li > input[class="set03_checkbox"]:checked';
 
-        // const query = 'div[id="type"] > ul > li > input[class="set03_checkbox"]:checked';
         const selectedEls = document.querySelectorAll(query);
-        // let span_btn = '<span>x</span>'
 
         // > > 반복문
         selectedEls.forEach((el) => {
-            // result += '<button type="button"># ' + el.name + '</button>'; //+ span_btn
-            result += '<button type="button"># ' + el.value + '</button>';
+            result += '<button type="button"># ' + el.value + '</button>';//+ span_btn
 
             dicValArr.push(el.value);
+            cnt += 1;
         });
-        // console.log(data, dicValArr);
         dicSearchList[data] = dicValArr.slice();    //배열 초기화에 영향을 받지 않는 깊은 복사
         dicValArr.splice(0);    //배열 초기화
     })
+
+    //radio_onclick--------------------
+    // > 선택된 목록에서 value 찾기
+    const query2 = 'input[type="radio"]:checked';
+    const selectedEls2 = document.querySelectorAll(query2);
+
+    selectedEls2.forEach((el) => {
+        result += '<button type="button" ># ' + el.value + '</button>'; //+ span_btn
+
+        dicValArr.push(el.value);   //배열에 velue 추가
+        cnt += 1;
+    });
+    dicSearchList['taste'] = dicValArr.slice();    //배열 초기화에 영향을 받지 않는 깊은 복사
+    dicValArr.splice(0);    //배열 초기화
 
     // > > 출력
     document.getElementById('list_ctt_tag').innerHTML = result;
 
     //리스트 추가
-    setSearchList( dicSearchList )
-
-
+    if (cnt != 0) { //선택된 것이 있을때만 실행
+        setSearchList( dicSearchList )
+    }
+    else{
+        $('.list_ctc').empty()  //리스트 리셋
+        document.getElementById("winelist_ctw").style.display = "none";
+    }
 }
 
+    //section03 wine list
+// 검색 결과를 화면에 출력
 function setSearchList( checkList ) {
+    let temp_html = ``
     $.ajax({
         type: 'POST',
         url: '/api/set_searchList',
-        data: JSON.stringify(checkList),
+        data: JSON.stringify(checkList), //Json형식으로 데이터 수신
         success: function (response) {
             $('.list_ctc').empty()
             let list = response['list_data'] // DB에 저장된 데이터 가져오기
-
-            console.log(list)
 
             for (let i = 0 ; i < list.length ; i++) {
                 let img = list[i]['img']
                 let name_eng = list[i]['name_eng']
                 let name_ko = list[i]['name_ko']
                 let kind = list[i]['kind']
+                let kind_color = 'red'
                 let country_img = list[i]['make_country_flag']
                 let country_name = list[i]['make_country']
                 let make = list[i]['make']
                 let food = list[i]['food']
+                //와인 색 css를 위한 부분
+                switch (kind) {
+                    case '레드':
+                        kind_color = 'red'
+                        break;
+                    case '화이트':
+                        kind_color = 'white'
+                       break;
+                    case '스파클링':
+                        kind_color = 'sparkling'
+                        break;
+                    case '로제':
+                        kind_color = 'rose'
+                        break;
+                    case '주정강화':
+                        kind_color = 'fortified'
+                        break;
+                    default:
+                        break
+                }
 
-                console.log(img)
-                console.log(name_eng)
-                console.log(name_ko)
-                console.log(kind)
-                console.log(country_img)
-                console.log(country_name)
-                console.log(make)
-                console.log(food)
-
-
-                let temp_html =
+                temp_html +=
                                 `<li class="content" onclick="load_wineif()">
                                     <img src="${img}" alt="wine image" class="wine_img">
                                     <div>
@@ -189,7 +222,7 @@ function setSearchList( checkList ) {
                                         <p>${name_ko}</p>
                                         <ul>
                                             <li>
-                                                <span></span><span>${kind}</span></li>
+                                                <span class="${kind_color}"></span><span>${kind}</span></li>
                                             <li>
                                                 <img src="${country_img}" alt="${country_name}">
                                                 <span>${country_name}</span></li>
@@ -198,18 +231,12 @@ function setSearchList( checkList ) {
                                     </div>
                                     <span class="view_btn">+</span>
                                 </li>`
-
-                $('.list_ctc').append(temp_html)
             }
-
-
+            $('.list_ctc').append(temp_html)
+            document.getElementById("winelist_ctw").style.display = "block";
         }
     })
 }
-
-
-    //section03 wine list
-
 
 
 

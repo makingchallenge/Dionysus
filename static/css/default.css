@@ -717,12 +717,47 @@ nav ul li button:hover {
     transform: skew(-0.03deg);
     text-transform: capitalize;
 }
-.winelist_ct .list_ctc .content div ul li:first-child span:first-child {
+
+/*.winelist_ct .list_ctc .content div ul li:first-child span:first-child */
+/* wine color*/
+.red{
     display: inline-block;
     width: 8px;
     height: 8px;
     border-radius: 8px;
     background-color: #860303;
+    margin-right: 8px;
+}
+.white{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: #e6e2c0;
+    margin-right: 8px;
+}
+.sparkling{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: #afd0f5;
+    margin-right: 8px;
+}
+.rose{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: #ef75bd;
+    margin-right: 8px;
+}
+.fortified{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: #83ad60;
     margin-right: 8px;
 }
 
