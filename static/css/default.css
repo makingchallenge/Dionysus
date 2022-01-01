@@ -173,7 +173,8 @@
 
 
 .section4_box{
-	width: 1400px;
+	max-width: 1280px;
+	width: 100%;
 	margin: auto;
 	padding: 120px 0px 190px 0px;
 
@@ -362,11 +363,11 @@
 		/* 카드 몸체 */
 
 			.section4 .slick-list /*section4-list*/{
-				width: 1280px;
+				width: 90%;
 				position: relative;
 				display: block;
 				overflow: hidden;
-				margin: auto;
+				margin: 0 auto;
 				
 			}
 			
@@ -428,11 +429,7 @@
 			.section4 .slick-dots li button::before {
 				font-size: 50px;
 				color: gray;
-			}
-
-			.slick-dots li button:before /*이 친구가 안먹어요*/{
 				font-family: 'slick';
-				font-size: 6px;
 				line-height: 20px;
 				position: absolute;
 				top: 0;
