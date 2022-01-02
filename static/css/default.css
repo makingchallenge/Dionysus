@@ -308,7 +308,7 @@ nav .swiper-rtl .swiper-button-prev:after {
 }
 .section02_mbbox .set02_slidebox li {
     width: 23.5%;
-    padding: 30px 0 20px;
+    padding: 70px 0 60px;
     position: relative;
     box-shadow: 0 0 15px rgba(0,0,0,10%);
     border-radius: 10px;
@@ -821,7 +821,7 @@ nav .swiper-rtl .swiper-button-prev:after {
     clear: both;
     line-height: 150%;
     display: -webkit-box;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -1004,6 +1004,8 @@ footer div .work_notion {
     width: 200px;
     display: block;
     float: left;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .wine_box .wine_inf {
     float: left;
@@ -1048,6 +1050,7 @@ footer div .work_notion {
     width:20px; float:none;
     display: inline-block;
     margin-right: 8px;
+    padding: 0;
 }
 
 
@@ -1477,6 +1480,14 @@ footer div .work_notion {
 				-webkit-font-smoothing: antialiased;
 				-moz-osx-font-smoothing: grayscale;
 			}
+
+
+
+.section4 .section4-img .slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: #880b0b;
+}
 
 
 

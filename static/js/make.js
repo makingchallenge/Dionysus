@@ -7,10 +7,12 @@
 var swiper = new Swiper('.section02_mbbox', {
     slidesPerView: 1,
     centeredSlides: true,
+    infinite : true,
     loop: true,
+    loopedSlides:1,
     //spaceBetween: 20,
     autoplay: true,
-    autoplaySpeed : 2000,   
+    autoplaySpeed : 2000,
     pagination: {
       el: '.swiper-pagination ',
       clickable: true,
@@ -35,13 +37,13 @@ var swiper = new Swiper('.section02_mbbox', {
 
 
 
-// right nav slide 
+// right nav slide
 var swiper2 = new Swiper('.r_nav_content', {
-    
+
     slidesPerView: 4,
     loop: true,
-    autoplay: true, 
-    centeredSlides: true,  
+    autoplay: true,
+    centeredSlides: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -53,34 +55,6 @@ var swiper2 = new Swiper('.r_nav_content', {
         },}
   });
 
-
-
-  var swiper3 = new Swiper('.section04_content', {
-    slidesPerView: 1,
-    centeredSlides: true,
-    loop: true,
-    //spaceBetween: 20,
-    autoplay: true,
-    autoplaySpeed : 2000,   
-    pagination: {
-      el: '.swiper-pagination02',
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + '</span>';
-      },
-    },
-    /*navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },*/
-    breakpoints: {
-        480: { //480 이상일 경우
-            slidesPerView: 2,
-          },
-        767: { //767 이상일 경우
-          slidesPerView: 4,
-        },}
-  });
 
 
 
@@ -114,6 +88,7 @@ function clear_checkbox() {
 }
 
 function recommend_wines() {
+
     $.ajax({
         type: 'GET',
         url: '/api/recommend',
@@ -167,7 +142,7 @@ function recommend_wines() {
                 }
 
                 // let temp_html = `<li onclick="load_wineif()">
-                let temp_html = `<li onclick="click_count('${wine_num}')">
+                let temp_html = `<li onclick="click_count('${wine_num}')" class="swiper-slide">
                                     <img src="${img}" alt="wine img">
                                     <span class="plus_btn">+</span>
                                     <div>
@@ -177,7 +152,8 @@ function recommend_wines() {
                                         <p>${make_country}</p>
                                     </div>
                                 </li>`
-                $('#recommend_box').append(temp_html)
+                $('#recommend_box').append(temp_html);
+
             }
         }
     })

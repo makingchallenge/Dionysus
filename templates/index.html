@@ -21,14 +21,16 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-        <!-- section02 slide -->
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
 
         <!-- section04 slide -->
         <link rel="stylesheet" type="text/css" href="/static/plugin/slick/slick.css"/>
         <link rel="stylesheet" type="text/css" href="/static/plugin/slick/slick-theme.css"/>
         <script type="text/javascript" src="/static/plugin/slick/slick.js"></script>
+
+        <!-- section02 slide -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.6/swiper-bundle.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.6/swiper-bundle.min.js"></script>
 
         <!-- Modernizr -->
         <script src="/static/js/modernizr.js"></script>
@@ -102,7 +104,7 @@
             </section>
 
             <!-- section02 -->
-            <section class="section02_content" id="section02">
+            <section class="section02_content bk-slider" id="section02">
                 <div class="section02_mbbox">
                     <div class="title_box">
                         <!-- 예시01 -->
@@ -112,50 +114,10 @@
                     </div>
                     
 
-                    <ul class="set02_slidebox" id="recommend_box">
-                        <!-- <li onclick="load_wineif()">
+                    <ul class="set02_slidebox swiper-wrapper" id="recommend_box">
 
-                            <img src="../static/images/eximg02.png" alt="wine img">
-                            <span class="plus_btn">+</span>
-                            <div>
-                                <p>
-                                    <span></span>페폴리 키안티 클라시코</p>
-                                <p>PEPPOLI CHIANTI CLASSICO</p>
-                                <p>ITALY</p>
-                            </div>
-                        </li>
-                        <li onclick="load_wineif()">
-                            <img src="../static/images/eximg02.png" alt="wine img">
-                            <span class="plus_btn">+</span>
-                            <div>
-                                <p>
-                                    <span></span>페폴리 키안티 클라시코</p>
-                                <p>PEPPOLI CHIANTI CLASSICO</p>
-                                <p>ITALY</p>
-                            </div>
-                        </li>
-                        <li onclick="load_wineif()">
-                            <img src="../static/images/eximg02.png" alt="wine img">
-                            <span class="plus_btn">+</span>
-                            <div>
-                                <p>
-                                    <span></span>페폴리 키안티 클라시코</p>
-                                <p>PEPPOLI CHIANTI CLASSICO</p>
-                                <p>ITALY</p>
-                            </div>
-                        </li>
-                        <li onclick="load_wineif()">
-                            <img src="../static/images/eximg02.png" alt="wine img">
-                            <span class="plus_btn">+</span>
-                            <div>
-                                <p>
-                                    <span></span>페폴리 키안티 클라시코</p>
-                                <p>PEPPOLI CHIANTI CLASSICO</p>
-                                <p>ITALY</p>
-                            </div>
-                        </li> -->
                     </ul>
-                    <div class="Pagination">
+                    <div class="swiper-pagination">
                         <!--Pagination-->
                     </div>
                 </div>
@@ -626,6 +588,8 @@
 
 			});
   		})
+
+
         </script>
         <script src="/static/js/make.js"></script>
     </body>
