@@ -28,7 +28,7 @@
 
 
 /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
-@media all and (min-width:480px) and (max-width:767px) {
+@media all and (min-width:320px) and (max-width:767px) {
 
     header button {
         display: block;
@@ -181,15 +181,21 @@
     }
 
     .wine_box .wine_inf .s_txt {
-        display: inline-block;
-        transform: translate(67%, 0);
+        display: block;
+        position: absolute;
+        left:50%;
+        transform: translate(-50%, 0);
     }
 
 
+    .wine_box .wine_inf .t_txt {margin-top:50px;}
+
+    .wine_box .wine_inf .w_txt  {text-align: center;}
 
 
 
-   /* footer div {padding: 80px 0 180px;}*/
+
+    footer div {padding: 80px 0 180px;}
     
 
 
@@ -210,19 +216,60 @@
       
      width :90%;
         }
+
+
+        .title_box p span {display:block; line-height: 150%;}
     
 }
-
 @media screen and (max-width: 479px) {
-    .section4_box, .slick-list, .footer_content_small_box, .section4 .slick-slide, .section4,.section4 .slick-slider, .section4_tip_txt2
-  {
-      
-     width :90%;
+    .footer_content_small_box,
+    .section4,
+    .section4 .slick-slide,
+    .section4 .slick-slider,
+    .section4_box,
+    .section4_tip_txt2,
+    .slick-list {
 
-    
-       
-       }
-    
+        width: 90%;
+
+    }
+
+    .section02_mbbox .set02_slidebox li {
+        box-shadow: none;
+        margin-right: -2%;
+    }
+    .section02_mbbox .set02_slidebox li:hover {
+        border: 0;
+    }
+    .section02_mbbox .set02_slidebox li div p:nth-child(1) {
+        transform: skew(1.97deg);
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 455px) {
+
+.wine_box .wine_inf .s_txt {
+    display: block;
+    position: absolute;
+    width: 320px;
+    left: 64%;
+    transform: translate(-50%,0);
+}
+}
+@media screen and (max-width: 400px) {
+
+
+
+    header ul li:first-child a {width: 110px;}
+    .title_box h2 {font-size: 35px;}
+
+
+
+
 }
 
 @media screen and (max-width: 320px) {
@@ -237,3 +284,11 @@
       
    
 }
+
+
+
+@media screen and (max-width: 319px) {
+    
+       .body {display:none;}
+    
+ }

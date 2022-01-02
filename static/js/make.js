@@ -55,7 +55,7 @@ var swiper2 = new Swiper('.r_nav_content', {
 
 
   var swiper3 = new Swiper('.section04_content', {
-    slidesPerView: 2,
+    slidesPerView: 1,
     centeredSlides: true,
     loop: true,
     //spaceBetween: 20,
