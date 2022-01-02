@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 
 
 @media screen and (max-width: 1280px) {
@@ -200,7 +199,7 @@
     footer div {padding: 80px 0 180px;}
     
 
-
+    .title_box p span {display:block;}
 
 
 
@@ -210,9 +209,6 @@
 
 
 }
-<<<<<<< HEAD
->>>>>>> cdac544c56c9295bbb343b65f5851600f4d1598b
-=======
 
 @media screen and (max-width: 768px) {
     .section4_box, .slick-list, .footer_content_small_box, .section4 .slick-slide, .section4,.section4 .slick-slider, .section4_tip_txt2
@@ -289,15 +285,9 @@
       
    
 }
-<<<<<<< HEAD
->>>>>>> ea3aa55b3f4458059c1d761468aca5cd8475e8c0
-=======
-
-
 
 @media screen and (max-width: 319px) {
     
        .body {display:none;}
     
  }
->>>>>>> 78b37e9b3748feef0191370c62489688a82e2a0a

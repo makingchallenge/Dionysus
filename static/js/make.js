@@ -133,7 +133,7 @@ function recommend_wines() {
                 // console.log(wine_num, cnt)
 
                 // let temp_html = `<li onclick="load_wineif()">
-                let temp_html = `<li onclick="click_count('${wine_num}')">
+                let temp_html = `<li onclick="click_count('${wine_num}')" class="swiper-slide">
                                     <img src="${img}" alt="wine img">
                                     <span class="plus_btn">+</span>
                                     <div>
