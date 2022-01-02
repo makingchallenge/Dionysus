@@ -9,7 +9,8 @@
 
         <title>Dionysus</title>
 
-        <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+
+        <link rel="shortcut icon" type="image/x-icon" href="../static/images/favicon.ico">
         <!-- 파비콘 생성해야함 -->
         <link
             rel="stylesheet"
@@ -24,11 +25,13 @@
         <!-- <link rel="stylesheet" href="/css/responsive.css"> / 반응형 작업시 추가 -->
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
         <script src="../static/js/modernizr.js"></script>
         <!-- Modernizr -->
         <meta name="copyright" content="@Tim Dionysus">
         <meta name="application-name" content="와인이 어려울 때는 Dionysus">
-        <!-- <meta property="og:image" content="/images/mobile_link.png"> / 모바일 메인 이미지
+
+        <!-- <meta property="og:image" content="/../static/images/mobile_link.png"> / 모바일 메인 이미지
         생성 및 추가 -->
         <meta property="og:locale" content="ko_KR">
 
@@ -101,8 +104,9 @@
                         <h2>디오니소스가 추천하는
                             <span>best wine</span></h2>
                     </div>
-                    <ul class="set02_slidebox">
-                        <li onclick="load_wineif()">
+
+                    <ul class="set02_slidebox" id="recommend_box">
+                        <!-- <li onclick="load_wineif()">
                             <img src="../static/images/eximg02.png" alt="wine img">
                             <span class="plus_btn">+</span>
                             <div>
@@ -141,7 +145,7 @@
                                 <p>PEPPOLI CHIANTI CLASSICO</p>
                                 <p>ITALY</p>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                     <div class="Pagination">
                         <!--Pagination-->
@@ -186,8 +190,9 @@
                                 </li>
                             </ul>
 
-                                <!--종류-->
+
                             <div class="icon_tab_ct" id="type">
+                                <!--종류-->
                                 <ul>
                                     <li class="round_checkbox">
                                         <input type="checkbox" id="checkbox0101" class="set03_checkbox" onclick="checkbox_onclick()" value="와인 종류 모두">
@@ -486,12 +491,14 @@
                         <!--결과리스트-->
                         <ul class="list_ctt"> 
                             <li id="list_ctt_tag">
-{#                                <button type="button">#프랑스<span>x</span></button>#}
-{#                                <button type="button">#3만원이하<span>x</span></button>#}
-{#                                <button type="button">#별점5점이상<span>x</span></button>#}
-{#                                <button type="button">#화이트와인<span>x</span></button>#}
-{#                                <button type="button">#화이트와인<span>x</span></button>#}
-{#                                <button type="button">#화이트와인<span>x</span></button>#}
+                                <!--
+                                <button type="button">#프랑스<span>x</span></button>
+                                <button type="button">#3만원이하<span>x</span></button>
+                                <button type="button">#별점5점이상<span>x</span></button>
+                                <button type="button">#화이트와인<span>x</span></button>
+                                <button type="button">#화이트와인<span>x</span></button>
+                                <button type="button">#화이트와인<span>x</span></button>
+                                -->
                             </li>
                             <li>
                                 <button type="button">추천순</button>
@@ -728,14 +735,14 @@
             1. 닫을 때마다 정보 리셋 (front script)
             2. db 연동 (b 작업)
             -->
-            <div class="wine_box">
+            <!-- <div class="wine_box">
                 <img src="../static/images/no_image2.jpg" alt="Vulcanico Tinto img">
                 <div class="wine_inf">
-                    <p class="s_tit">Azores, Vulcanico Tinto</p><!--영문이름-->
-                    <p class="t_tit">아소르스, 불카니코 틴도</p><!--이름-->
+                    <p class="s_tit">Azores, Vulcanico Tinto</p>
+                    <p class="t_tit">아소르스, 불카니코 틴도</p>
                     <ul class="s_txt">
-                        <li><span></span><span>red wine</span></li><!--종류-->
-                        <li><img src="../static/images/eximg03.gif" alt="portugal"><span>포르투갈 (portugal)</span></li><!--제조국-->
+                        <li><span></span><span>red wine</span></li>
+                        <li><img src="../static/images/eximg03.gif" alt="portugal"><span>포르투갈 (portugal)</span></li>
                     </ul>
                     <table class="t_txt">
                         <tr>
@@ -781,8 +788,8 @@
                     </div>
 
                 </div>
-            </div>
-        </div> <!--b - 작업 가능-->
+            </div>-->
+        </div> <!--b - 작업 가능-->        
         <script src="../static/js/make.js"></script>
     </body>
 </html>

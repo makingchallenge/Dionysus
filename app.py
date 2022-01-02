@@ -1,17 +1,21 @@
+from pymongo import MongoClient
 from flask import Flask, render_template, jsonify, request
 from bson.son import SON
+from bson.json_util import dumps
 import json
+
 app = Flask(__name__)
 
-from pymongo import MongoClient
-# client = MongoClient('localhost', 27017)
 client = MongoClient('mongodb://test:test@13.124.160.184', 27017)
 db = client.dbdionysos
 
-## HTML을 주는 부분
+
+# HTML을 주는 부분
 @app.route('/')
 def home():
     return render_template('index.html')
+    
+# API 역할을 하는 부분
 
 # 검색을 위한 조건 제공
 @app.route('/api/search_list', methods=['POST'])
@@ -22,8 +26,7 @@ def search_list():
     result = db.wines.aggregate([
         {
             "$group": {
-                "_id": search_receive #"$kind" #"$alcohol",  #"$make_country",  #"$kind",
-                # "count":{"$sum":1}
+                "_id": search_receive 
             }
         },
         {"$sort": SON([("_id", -1)])}
@@ -159,18 +162,40 @@ def set_searchList():
 
     result = db.wines.find( json.loads(query) , {'_id': False}).sort("make_country")
 
-    # 테스트 용
-    # test = db.wines.find({
-    #     "$and": [
-    #         {"$or": [{"make_country": "덴마크(Denmark)"}, {"make_country": "레바논(Lebanon)"}]},
-    #         {"$or": [{"kind": "레드"}, {"kind": "기타"}]},
-    #         {"Sweetness": 4},
-    #         {"$or": [{"price": {"$gte": 10000, "$lt": 30000}}, {"price": {"$gte": 1000000}}]}
-    #     ]
-    # }).sort("make_country")
-
     result = list(result)
     return jsonify({'list_data': result})
+
+# 추천박스
+@app.route('/api/recommend', methods=['GET'])
+def recommend_wines():
+    wine_list = list(db.wines.find({}, {'_id': False}).sort('click_cnt', -1).limit(4))
+    
+    return jsonify({'wine_lists': wine_list})
+
+# 인포박스
+@app.route('/api/info', methods=['POST'])
+def wine_info():
+    num_receive = request.form['num_give']
+    info_list = db.wines.find_one({'\ufeffwine_num': num_receive})
+    
+    #ensure_ascii=False 이걸로 한글 표현 할때 사용
+    return jsonify({'info_lists': dumps(info_list, ensure_ascii=False)})
+
+
+# 클릭횟수 추가
+@app.route('/api/click', methods=['POST'])
+def click_count():
+    num_receive = request.form['num_give']
+    target_wine = db.wines.find_one({'\ufeffwine_num': num_receive})\
+    
+    current_click = target_wine['click_cnt']
+
+    new_click = current_click + 1
+
+    db.wines.update_one({'\ufeffwine_num': num_receive}, {'$set': {'click_cnt': new_click}})
+
+    return jsonify({'msg': '좋아요 완료!'})
+
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)
