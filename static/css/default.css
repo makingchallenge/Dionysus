@@ -211,6 +211,7 @@ nav ul li img {
     display: block;
     margin: 0 auto;
     width: 22px;
+    transform: translateY(50%);
 }
 
 nav .swiper-button-next,
