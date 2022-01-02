@@ -5,24 +5,20 @@ $(document).ready(function(){
   let randomNumber = Math.floor(Math.random() * 4) + 1;
   $('#section4-img_random').children('#img').attr('src', '/static/images/wine_thumbnail_' + randomNumber + '.png');
 
-// 지금 이거는 .section4-img 의 자식 div한테 속성을 부여한다고 되어있어요'src', '/static/images/wine_thumbnail_0' + randomNumber + '.png'
-//우리는 그 div 안에 a 안에 img한테 속성을 줘야해요~
-//그리고 지금 우리가 작성한 html을 보고 넣으면 안되는게 저희가 슬라이드 작업을 하면서 script를 사용했잖아요~
-//그래서 tag가 많이 새로 생성되어있어요
 
-  let img_random = ['#section4-img_random']
+  let img_random = ['.section4-img']
   for (let i = 0; i < img_random.length; i++) {
       let image = img_random[i]['src']
       let url = img_random[i]['a href']
       let comment = img_random[i]['alt']
 
-  let temp_html = `
+  /*let temp_html = `
     <a href="${url}" target="_blank">
         <img alt="${comment}" 
-    src="${image}"/></a>`
+    src="${image}"/></a>`*/
 
     /*이렇게도해보고 저렇게도 해보고했는데 안돼네요..뭐가문제일까요...*/
-    /*let temp_html = ` <div>
+    let temp_html = ` <div>
 
     <a class="section4-img_ramdon" href="https://www.youtube.com/watch?v=GEFcRflo0c4" target="_blank">
         <img alt="간단하면서 예쁜, 5분 완성 와인안주 추천 BEST 5 (요리 못해도 따라하기 쉬워요!!!)" 
