@@ -11,7 +11,7 @@
         <title>Dionysus</title>
 
 
-        <link rel="shortcut icon" type="image/x-icon" href="../static/images/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="/static/images/favicon.ico">
         
         <!-- font -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
@@ -31,21 +31,26 @@
         <script type="text/javascript" src="/static/plugin/slick/slick.js"></script>
 
         <!-- Modernizr -->
-        <script src="../static/js/modernizr.js"></script>
+        <script src="/static/js/modernizr.js"></script>
 
         <!-- basic css -->
 
-        <link rel="stylesheet" href="../static/css/default.css">
-        <link rel="stylesheet" href="../static/css/responsive.css">
+        <link rel="stylesheet" href="/static/css/default.css">
+        <link rel="stylesheet" href="/static/css/responsive.css">
 
         <meta name="copyright" content="@Tim Dionysus">
         <meta name="application-name" content="와인이 어려울 때는 Dionysus">
-        <meta property="og:image" content="/../static/images/mobile_link.png">
+        <meta property="og:image" content="/static/images/mobile_link.png">
         <meta property="og:locale" content="ko_KR">
 
         <meta property="og:title" content="Tim Dionysus">
         <!-- <meta property="og:url" content=""> / 도메인 생성 후 추가 / 포폴제작시 추가 -->
         <meta property="og:description" content="Dionysus - 내 취향에 맞는 와인을 찾고 싶을 때 / 와인정보 / 와인팁">
+
+
+
+
+
 
     </head>
     <body>
@@ -53,19 +58,22 @@
         <div class="body">
 
             <!-- section01,02, header - -->
-            <header>
-                <ul>
+            <header id="headct">
+                <ul id="mhead_size02">
                     <li>
                         <a href="#">
                             <!--logo-->
                         </a>
                     </li>
-                    <li>
+                    <li id="mhead_size">
                         <a href="#section02">베스트와인</a>
                         <a href="#section03">와인찾기</a>
                         <a href="#section04">와인팁</a>
                     </li>
                 </ul>
+                <button type="button" id="mb_openbtn" onclick="open_mobilemu()">
+                    <span></span><span></span><span></span>
+                </button>
             </header>
 
             <!-- nav -->
