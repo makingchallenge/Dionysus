@@ -1,9 +1,33 @@
 <<<<<<< HEAD
 =======
 
+
+@media screen and (max-width: 1280px) {
+    .section4_box,.section4 .slick-list, .footer_content_small_box,.section4 .slick-slide, .section4, .section4 .slick-slider
+    {
+       width :100%;
+       
+        }
+    
+    
+}
+
+                       
+
 /* PC , 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
 @media all and (min-width:768px) and (max-width:1023px) {
     }
+
+    
+@media screen and (max-width: 960px) {
+    .section4_box, .slick-list, .footer_content_small_box, .section4 .slick-slide, .section4,.section4 .slick-slider
+    {
+    
+     width :90%;
+        }
+    
+}
+
 
 /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
 @media all and (min-width:480px) and (max-width:767px) {
@@ -167,7 +191,7 @@
 
 
 
-    footer div {padding: 80px 0 180px;}
+   /* footer div {padding: 80px 0 180px;}*/
     
 
 
@@ -180,4 +204,42 @@
 
 
 }
+<<<<<<< HEAD
 >>>>>>> cdac544c56c9295bbb343b65f5851600f4d1598b
+=======
+
+@media screen and (max-width: 768px) {
+    .section4_box, .slick-list, .footer_content_small_box, .section4 .slick-slide, .section4,.section4 .slick-slider, .section4_tip_txt2
+    
+  {
+      
+     width :90%;
+        }
+    
+}
+
+@media screen and (max-width: 479px) {
+    .section4_box, .slick-list, .footer_content_small_box, .section4 .slick-slide, .section4,.section4 .slick-slider, .section4_tip_txt2
+  {
+      
+     width :90%;
+
+    
+       
+       }
+    
+}
+
+@media screen and (max-width: 320px) {
+   .section4_box, .slick-list, .footer_content_small_box, .section4 .slick-slide, .section4,.section4 .slick-slider, .section4_tip_txt2
+ {
+     
+    width :90%;
+    display: block;
+   
+         
+      }
+      
+   
+}
+>>>>>>> ea3aa55b3f4458059c1d761468aca5cd8475e8c0

@@ -4,6 +4,7 @@
 @import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/naumsquare.css');
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 
+
 @font-face {
     font-family: 'LotteMartDream';
     font-style: normal;
@@ -22,9 +23,7 @@
     font-weight: 300;
     src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
   }
-  
-
-
+ 
 
 
 /* reset */
@@ -58,6 +57,7 @@
 	textarea:-ms-input-placeholder {color:#aaa;} /* IE10+ */
 
 
+
     .lottemartdream {font-family: 'LotteMartDream', sans-serif;}
 	
 	/*공통부분 예시01*/
@@ -74,8 +74,6 @@
     .sparkling_wine_c {background-color:#afd0f5;}
     .rose_wine_c {background-color:#ef75bd;}
     .fortified_wine_c {background-color:#83ad60;}
-
-
 
 
 
@@ -296,11 +294,7 @@ nav .swiper-rtl .swiper-button-prev:after {
 
 
 
-
 /*section02*/
-
-
-
 
 .section02_content {
     position: relative;
@@ -838,7 +832,7 @@ nav .swiper-rtl .swiper-button-prev:after {
 
 
 
-/*section04*/
+/*section04
 
 .section04_content {
     max-width: 1280px;
@@ -899,7 +893,7 @@ nav .swiper-rtl .swiper-button-prev:after {
 
 >>>>>>> cdac544c56c9295bbb343b65f5851600f4d1598b
 
-/*footer*/
+//footer
 
 footer {
     width: 100%;
@@ -944,7 +938,7 @@ footer div .work_notion {
 =======
 
 
-
+*/
 
 
 
@@ -1124,3 +1118,349 @@ footer div .work_notion {
         opacity: 1;
     }
 }
+
+
+
+
+
+/*section04*/
+
+.section4_wine_tip {
+	width: 100%;
+	margin: 50px auto;
+
+}
+
+.section4_tip_txt1 {
+	font-size: 22px;
+	margin: 0 auto;
+	font-weight: bold;
+	text-align: center;
+	line-height: 148%;
+	display: block;
+	
+}
+
+.section4_tip_txt2 span {
+	
+	white-space: nowrap;
+	
+}
+
+
+.section4_tip_txt2 {
+	text-align: center;
+	font-size: 43px;
+	font-weight: bold;
+	
+	margin: 10px auto;
+	display: block;
+
+
+
+}
+
+.section4_tip_txt1 span {
+	
+	white-space: nowrap;
+	
+}
+
+
+	
+
+.section4_tip_red{
+	color: #880b0b
+}
+
+
+
+
+
+.section4_comma {
+	width: 100%;
+	
+
+}
+
+.section4_comma img{
+	margin: 30px auto;
+	display: block;
+
+	
+
+}
+
+
+.section4_box{
+	max-width: 1280px;
+	width: 100%;
+	margin: auto;
+	padding: 120px 0px 190px 0px;
+
+
+}
+
+
+
+
+/*footer*/
+
+  .footer_content {
+            font-size: 16px;
+
+            color: white;
+
+            max-width: 100%;
+            padding: 100px 0 100px 0;
+
+            background-color: #880b0b;
+        }
+
+        .footer_content_small_box {
+            
+            margin: auto;
+        }
+
+
+        .footer_content_name {
+            font-size: 16px;
+            margin: auto;
+            text-align: center;
+        
+        }
+
+        .footer_content_link {
+            font-size: 16px;
+            margin: 15px auto;
+            text-align: center;
+
+        }
+
+        .footer_content_name_spacing {
+            word-spacing: 13px;
+			
+        }
+
+
+        .footer_content_copyright {
+
+            font-size: 16px;
+            margin: 30px auto;
+            text-align: center;
+
+        }
+
+        .footer_logo {
+            width: 100%;
+        
+
+
+        }
+
+     .footer_logo img{
+        height: 80px; 
+        width: 160px;
+		 display: block;
+		 margin: 20px auto;
+    
+        }
+
+
+
+		/*Swiper*/
+
+        
+
+		  .section4{
+			width: 100%;
+			margin: 0 auto;
+		  }
+		  
+		  .section4-img{
+			width: 100%;
+			margin: auto;
+			
+		  }
+
+		
+
+		  .section4 .slick-slide /*section4-img*/{
+		
+			display: block;  
+			width: 100%;
+			
+				
+			
+		  }
+
+		  .section4 .slick-slide img {
+	
+			margin: auto;
+			width: 90%;
+			display: block;
+			padding-bottom: 20px;/* 이 아이를 빼라하셨는데 width값 조절하니까 괜찮아 보이더라구요 
+									(안넣으면 웹화면에서는 밑에가 너무 붙기도해서) 
+									혹시나 유나님이 보기에 이상하다 싶으면 수정하겠습니다!*/
+            }
+
+			
+		
+	   
+			.section4  .slick-dots li button:before /*section4-img*/ {
+			font-size:30px;
+			color: gray;}
+
+
+			/*  왼 화살표 */
+			
+			.section4 .slick-prev /*section4-arrow*/{
+				left: 5px;
+				
+			}
+			
+
+			
+			.section4 .slick-prev:before /*section4-arrow*/{
+				content: url(/static/images/section4-left-arrow.png);
+				
+			}
+
+
+			
+	   
+			 /* 오 화살표*/
+			
+			
+			 .section4 .slick-next /*section4-arrow*/{
+				right: 20px;
+				
+				
+			}
+			.section4 .slick-prev, .slick-next /*section4-arrow*/{
+				font-size: 0;
+				line-height: 0;
+				position: absolute;
+				top: 46.3%;
+				display: block;
+				width: 20px;
+				height: 20px;
+				padding: 0;
+				-webkit-transform: translate(0, -50%);
+				-ms-transform: translate(0, -50%);
+				transform: translate(0, -50%);
+				cursor: pointer;
+				color: transparent;
+				border: none;
+				outline: none;
+				background: transparent;
+			
+				
+			}
+			.section4 button /*section4-arrow*/{
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			
+			.section4 .slick-next:before /*section4-arrow*/{
+				content: url(/static/images/section4-right-arrow\ .png);
+	
+			}
+			.section4 .slick-prev:before, .slick-next:before /*section4-arrow*/{
+				font-family: 'slick';
+				font-size: 40px;
+				line-height: 1;
+				opacity: .75;
+				color: white;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				
+			}
+
+		
+
+		/* 카드 몸체 */
+
+			.section4 .slick-list /*section4-list*/{
+				width: 90%;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				margin: 0 auto;
+				
+			}
+			
+			
+			.section4 .slick-slider /*section4-list*/{
+				position: relative;
+				display: block;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				-webkit-touch-callout: none;
+				-khtml-user-select: none;
+				-ms-touch-action: pan-y;
+				touch-action: pan-y;
+				-webkit-tap-highlight-color: transparent;
+				
+			}
+			
+
+		
+		
+
+			/*하단 버튼*/
+			.section4 .slick-dots  {
+				position: absolute;
+				bottom: -25px;
+				display: block;
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+				list-style: none;
+				text-align: center;
+			}
+
+	
+			
+			
+		
+
+			.section4 .slick-slider {
+				position: relative;
+				display: block;
+				box-sizing: border-box;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				-webkit-touch-callout: none;
+				-khtml-user-select: none;
+				-ms-touch-action: pan-y;
+				touch-action: pan-y;
+				-webkit-tap-highlight-color: transparent;
+			}
+
+	
+			.section4 .slick-dots li button::before {
+				font-size: 50px;
+				color: gray;
+				font-family: 'slick';
+				line-height: 20px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 20px;
+				height: 20px;
+				content: '•';
+				text-align: center;
+				opacity: .25;
+				color: black;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+		
