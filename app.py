@@ -6,7 +6,7 @@ import json
 
 app = Flask(__name__)
 
-client = MongoClient('mongodb://test:test@13.124.160.184', 27017)
+client = MongoClient('mongodb://test:test@15.164.222.144', 27017)
 db = client.dbdionysos
 
 
