@@ -1486,6 +1486,14 @@ footer div .work_notion {
 
 
 
+.section4 .section4-img .slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: #880b0b;
+}
+
+
+
 
 /*.winelist_ct .list_ctc .content div ul li:first-child span:first-child */
 /* wine color*/

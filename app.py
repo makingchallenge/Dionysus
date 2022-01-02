@@ -168,7 +168,7 @@ def set_searchList():
 # 추천박스
 @app.route('/api/recommend', methods=['GET'])
 def recommend_wines():
-    wine_list = list(db.wines.find({}, {'_id': False}).sort('click_cnt', -1).limit(4))
+    wine_list = list(db.wines.find({}, {'_id': False}).sort('click_cnt', -1).limit(8))
     
     return jsonify({'wine_lists': wine_list})
 
