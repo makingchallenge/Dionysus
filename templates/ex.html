@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- section02 slide -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.6/swiper-bundle.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.6/swiper-bundle.min.js"></script>
+
+    <style>
+    </style>
+</head>
+<body>
+    
+  
+
+
+<div id="main">
+  <div>
+    <input type="button" onclick="MoveUp()" value="위로"> 
+  </div>
+  <div id="content-scroll" height="300px"
+  >
+<table>
+  <tr>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>5</td>
+  </tr>
+</table>
+  </div>
+  </div>
+<script type="text/javascript">
+var scrolled = 0;//얼마나 스크롤됐는지 기록할 변수
+var itemHeight = 60;//한 아이템의 높이
+var viewItems = 5;//보이는 아이템 개수</p>
+ 
+
+
+function MoveUp() { //스크롤이 될 수 있는 높이 즉, 안보이는 내용까지 포함한,
+  //내용물의 높이가 바로 $("#content-scroll").attr("scrollHeight")
+   //즉, 바닥까지 왔다면, 더이상 아래로 스크롤하지 않는다.
+    if (scrolled == $("#content-scroll").attr("scrollHeight")  - (itemHeight * viewItems)) { return; }
+    scrolled += 60; $("#content-scroll").animate({ scrollTop: scrolled }, 200); }
+function MoveDown() { //스크롤된 좌표값이 0이라면, 더이상 위로가지 않는다.
+   if (scrolled == 0) { return; } scrolled -= 60;
+    $("#content-scroll").animate({ scrollTop: scrolled; }, 200); }
+
+  </script>
+
+		
+</body>
+</html>
