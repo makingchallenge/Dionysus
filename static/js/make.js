@@ -520,7 +520,7 @@ function wine_info(wine_num1) {
                                         <p class="t_tit">${name_ko}</p><!--이름-->
                                         <ul class="s_txt">
                                             <li><span class="${kind_color}"></span><span>${kind}</span></li><!--종류-->
-                                            <li><img src="${make_country_flag}" alt="portugal"><span>${make_country}</span></li><!--제조국-->
+                                            <li><img src="${make_country_flag}" alt=${make_country}><span>${make_country}</span></li><!--제조국-->
                                         </ul>
                                         <table class="t_txt">
                                             <tr>
@@ -567,12 +567,102 @@ function wine_info(wine_num1) {
 
                                     </div>
                                 </div>`
-                $('#wine_infor_content').append(temp_html_2)         
+                $('#wine_infor_content').append(temp_html_2)
                       
             load_wineif()
+            LatelyViewNavWrite(wine_num, img);
+            LatelyViewNavRead()
         }
     })
 }
+
+//로컬스토리지 저장
+function setLocalStorage(name,obj) {
+    localStorage.setItem(name, obj)
+}
+//로컬스토리지 삭제
+function removeLocalStorage(name) {
+    localStorage.removeItem(name)
+}
+//로컬스토리지 특정 객체 가져오기
+function getItemLocalStorage(name) {
+    return localStorage.getItem(name)
+}
+//변수의 상태 확인
+function isNull(v) {
+    return (v == undefined || v == null || v == '' || v == NaN) ? true : false;
+}
+
+
+//최근본 아이템 삭제 기간
+const LATELY_VIEW_ITEM_EXPIRATION_DATE = 1;
+//최근본 아이템 최대 저장 개수
+const LATELY_VIEW_ITEM_MAX_SAVE_COUNT = 10;
+//nav 바
+function LatelyViewNavWrite(wine_num, img_url) {
+    var latelyViewItemListJson = getItemLocalStorage('latelyViewItemList');
+    var viewTime = new Date();
+    //최근 본 상품이 아얘 없을경우 무조건 저장
+    if (latelyViewItemListJson == "null" || isNull(latelyViewItemListJson)) {
+
+        //새로 저장될
+        var latelyViewItemListNew = new Array();
+
+        var latelyViewItem = {
+            "wine_num": wine_num
+            , "img_url": img_url
+            , "viewTime": viewTime.setDate(viewTime.getDate() + Number(LATELY_VIEW_ITEM_EXPIRATION_DATE))
+        }
+
+        latelyViewItemListNew.unshift(latelyViewItem);
+        setLocalStorage('latelyViewItemList', JSON.stringify(latelyViewItemListNew));
+        //있을경우
+    } else {
+        var latelyViewItemList = JSON.parse(latelyViewItemListJson);
+        var isExistsItem = false;
+
+
+        breakPoint : for (var i in latelyViewItemList) {
+            if (Number(latelyViewItemList[i].wine_num) == Number(wine_num)) {
+                isExistsItem = true;
+                break breakPoint;
+            }
+        }
+
+        //새로본 상품일경우만 저장
+        if (!isExistsItem) {
+
+            //최대 50개 일경우 마지막꺼 삭제 후제일 앞에 저장
+            if (latelyViewItemList.length == Number(LATELY_VIEW_ITEM_MAX_SAVE_COUNT)) latelyViewItemList.pop();
+
+            var latelyViewItem = {
+                "wine_num": wine_num
+                , "img_url": img_url
+                , "viewTime": viewTime.setDate(viewTime.getDate() + Number(LATELY_VIEW_ITEM_EXPIRATION_DATE))
+            }
+            latelyViewItemList.unshift(latelyViewItem);
+            setLocalStorage('latelyViewItemList', JSON.stringify(latelyViewItemList));
+        }
+    }
+}
+
+function LatelyViewNavRead() {
+    var latelyViewItemList = JSON.parse(getItemLocalStorage('latelyViewItemList'));
+
+    if (latelyViewItemList != "null" || isNull(latelyViewItemList) == false) {
+        $('#r_nav_list').empty()  //리스트 리셋
+        for (var i in latelyViewItemList){
+            let temp_html =
+                `<li class="swiper-slide">
+                   <img src= "${latelyViewItemList[i].img_url}" alt="이전에 봤던 와인" onclick="click_count('${latelyViewItemList[i].wine_num}')">
+                </li>`
+            $('#r_nav_list').append(temp_html)
+        }
+    }
+}
+
+
+
     // wine infor load
 function load_wineif() {
     document.getElementById("wine_infor_content").removeAttribute('class');
