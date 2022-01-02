@@ -132,13 +132,47 @@ function recommend_wines() {
                 let cnt = mywines[i]['click_cnt']
                 // console.log(wine_num, cnt)
 
+                //와인 색 css를 위한 부분
+                let kind_color = 'red'
+                switch (kind) {
+                    case '레드':
+                        kind_color = 'red'
+                        break;
+                    case '화이트':
+                        kind_color = 'white'
+                       break;
+                    case '스파클링':
+                        kind_color = 'sparkling'
+                        break;
+                    case '로제':
+                        kind_color = 'rose'
+                        break;
+                    case '주정강화':
+                        kind_color = 'fortified'
+                        break;
+                    case '우리술':
+                        kind_color = 'our_alcohol'
+                        break;
+                    case '사케/청주':
+                        kind_color = 'cheongju'
+                        break;
+                    case '기타':
+                        kind_color = 'etc'
+                        break;
+                    case '고도주':
+                        kind_color = 'godoju'
+                        break;
+                    default:
+                        break
+                }
+
                 // let temp_html = `<li onclick="load_wineif()">
                 let temp_html = `<li onclick="click_count('${wine_num}')">
                                     <img src="${img}" alt="wine img">
                                     <span class="plus_btn">+</span>
                                     <div>
                                         <p>
-                                            <span></span>${name_ko}</p>
+                                            <span class="${kind_color}"></span>${name_ko}</p>
                                         <p>${name_eng}</p>
                                         <p>${make_country}</p>
                                     </div>
@@ -445,13 +479,47 @@ function wine_info(wine_num1) {
             }
             let Tannin_html = temp
 
+            //와인 색 css를 위한 부분
+            let kind_color = 'red'
+            switch (kind) {
+                case '레드':
+                    kind_color = 'red'
+                    break;
+                case '화이트':
+                    kind_color = 'white'
+                   break;
+                case '스파클링':
+                    kind_color = 'sparkling'
+                    break;
+                case '로제':
+                    kind_color = 'rose'
+                    break;
+                case '주정강화':
+                    kind_color = 'fortified'
+                    break;
+                case '우리술':
+                    kind_color = 'our_alcohol'
+                    break;
+                case '사케/청주':
+                    kind_color = 'cheongju'
+                    break;
+                case '기타':
+                    kind_color = 'etc'
+                    break;
+                case '고도주':
+                    kind_color = 'godoju'
+                    break;
+                default:
+                    break
+            }
+
             let temp_html_2 = `<div class="wine_box">
                                     <img src="${img}" alt="wine img">
                                     <div class="wine_inf">
                                         <p class="s_tit">${name_eng}</p><!--영문이름-->
                                         <p class="t_tit">${name_ko}</p><!--이름-->
                                         <ul class="s_txt">
-                                            <li><span></span><span>${kind}</span></li><!--종류-->
+                                            <li><span class="${kind_color}"></span><span>${kind}</span></li><!--종류-->
                                             <li><img src="${make_country_flag}" alt="portugal"><span>${make_country}</span></li><!--제조국-->
                                         </ul>
                                         <table class="t_txt">
