@@ -1,3 +1,76 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/naumsquare.css');
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+@font-face {
+    font-family: 'LotteMartDream';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'LotteMartDream';
+    font-style: normal;
+    font-weight: 700;
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'LotteMartDream';
+    font-style: normal;
+    font-weight: 300;
+    src: url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'), url('//cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
+  }
+  
+
+
+
+
+/* reset */
+	html,body {margin:0; padding:0; font-family:'NanumSquare', sans-serif; font-size:13px; color:#000; -webkit-text-size-adjust:none; position:relative; line-height:1.2; background-color:#fff; scroll-behavior: smooth; }
+
+	dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote {margin:0; padding:0; -webkit-text-size-adjust:none;}
+	th,td,input,textarea,select {font-size:13px; color:#000; font-family:'NanumSquare', sans-serif; -webkit-text-size-adjust:none;}
+	th,td {word-break:break-all; word-wrap:break-word; -webkit-text-size-adjust:none;}
+	table {border-spacing:0; border-collapse:collapse; -webkit-text-size-adjust:none; border:0; table-layout:fixed;}
+	address,caption,cite,code,dfn,var {font-style:normal; font-weight:normal; -webkit-text-size-adjust:none;}
+	em {font-style:inherit; -webkit-text-size-adjust:none;}
+	ol,ul,li {list-style:none;}
+	h1,h2,h3,h4,h5,h6 {font-size:100%; font-weight:normal;}
+	abbr,acronym {border:0;}
+	hr,legend,caption {visibility:hidden; overflow:hidden; line-height:0; width:0; height:0; margin:0; padding:0;}
+	img,fieldset {border:0 none;}
+	label {cursor:pointer;}
+	a {color:inherit;}
+	a:link, a:visited, a:hover {text-decoration:none;}
+	a:active {text-decoration:none;}
+	input,img {vertical-align:middle;}
+    button{padding:0; margin:0; box-sizing: border-box;}
+
+	input::-webkit-input-placeholder {color:#aaa;} /* webkit */
+	input:-moz-placeholder {color:#aaa;} /* Firefox 4-18 */
+	input::-moz-placeholder {color:#aaa;} /* Firefox 19+ */
+	input:-ms-input-placeholder {color:#aaa;} /* IE10+ */
+	textarea::-webkit-input-placeholder {color:#aaa;} /* webkit */
+	textarea:-moz-placeholder {color:#aaa;} /* Firefox 4-18 */
+	textarea::-moz-placeholder {color:#aaa;} /* Firefox 19+ */
+	textarea:-ms-input-placeholder {color:#aaa;} /* IE10+ */
+
+
+    .lottemartdream {font-family: 'LotteMartDream', sans-serif;}
+	
+	/*공통부분 예시01*/
+	.title_box {padding-top:85px; background-image: url("../images/point_icon01.png"); background-repeat: no-repeat; background-position: top center; text-align: center; margin-bottom:75px;}
+	.title_box p {font-size:20px; margin-bottom:20px;}
+	.title_box h2 {font-size:40px; font-family: 'LotteMartDream', sans-serif; font-weight: bold; text-transform: capitalize;}
+	.title_box h2 span {color:#860303;}
+
+
+
+
+
+
 /*.winelist_ct .list_ctc .content div ul li:first-child span:first-child */
 /* wine color*/
 .red{
@@ -39,4 +112,896 @@
     border-radius: 8px;
     background-color: #83ad60;
     margin-right: 8px;
+}
+
+
+
+
+
+
+
+/* header */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255,255,255,0.8);
+    z-index: 999;
+}
+
+header ul {
+    position: relative;
+    overflow: hidden;
+    padding: 4.5px 0;
+}
+
+header ul li:first-child {
+    float: left;
+    padding-left: 3%;
+}
+
+header ul li:last-child {
+    float: right;
+    padding-right: 3%;
+}
+
+header ul li:first-child a {
+    display: block;
+    width: 125px;
+    height: 56px;
+    background-image: url("../images/logo01.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+header ul li:last-child a {
+    display: block;
+    float: left;
+    height: 56px;
+    line-height: 56px;
+    font-size: 18px;
+    /*20pt > 18px*/
+    margin-left: 100px;
+}
+
+header ul li:last-child a:first-child {
+    margin-left: 0;
+}
+
+/*nav*/
+nav { 
+    display:none;
+    position: fixed;
+    top: 25%;
+    right: 3%;
+    z-index: 999;
+
+    display:none;
+}
+nav#r_nav.view_rnav{
+    display:block; 
+}
+nav ul {
+    width: 100px;
+    position: relative;
+    overflow: hidden;
+}
+nav ul li {
+    width: 90px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 16%);
+    border: 2px solid #fff;
+
+}
+
+nav ul li:first-child,
+nav ul li:last-child {
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    border: 0;
+}
+
+nav ul li:hover {
+    border: 2px solid #860303;
+    box-shadow: none;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+}
+
+nav ul li:first-child:hover,
+nav ul li:last-child:hover {
+    border: none;
+}
+
+nav ul a {
+    width: 100%;
+    display: block;
+    padding: 15px 0;
+}
+nav ul a img {
+    display: block;
+    margin: 0 auto;
+    width: 30px;
+}
+nav ul li button {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-image: url("../images/right_nav_arr_g.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    padding: 1px;
+    background-color: transparent;
+    border: 0;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    cursor: pointer;
+}
+
+nav ul li:first-child button {
+    transform: rotate(180deg);
+}
+nav ul li button:hover {
+    background-image: url("../images/right_nav_arr_dg.png");
+}
+
+
+
+/*section01*/
+
+
+.section01_content {
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-image: url("../images/section01_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.section01_content img {
+    display: block;
+    margin: 309px auto;
+    max-width: 543px;
+}
+
+
+
+
+
+/*section02*/
+
+
+
+
+.section02_content {
+    position: relative;
+    max-width: 100%;
+	overflow:hidden;
+}
+
+.section02_content .section02_mbbox {
+	max-width:1280px; margin:0 auto; padding:130px 0; position:relative;
+	overflow:hidden;
+}
+
+.section02_mbbox .set02_slidebox {
+    position: relative;
+    width: 1130px;
+	margin:0 auto;
+}
+.section02_mbbox .set02_slidebox li {
+    width: 260px;
+    padding: 30px 0 20px;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0,0,0,10%);
+    border-radius: 10px;
+	float:left;
+	margin-right:30px;
+	border:2px solid #fff;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.section02_mbbox .set02_slidebox li:last-child {margin-right:0;}
+.section02_mbbox .set02_slidebox li img {
+    display: block;
+    margin: 0 auto 15px;
+    width: 100px;
+}
+.section02_mbbox .set02_slidebox li .plus_btn {
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-color: #e2e2e2;
+    border-radius: 38px;
+    text-align: center;
+    line-height: 38px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.section02_mbbox .set02_slidebox li div p {
+    text-align: center;
+    margin-bottom: 3px;
+    font-size: 12px;
+    transform: skew(-0.03deg);
+    padding:0 20px;
+    display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;  
+}
+.section02_mbbox .set02_slidebox li div p:nth-child(1) {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transform: skew(-0.03deg);
+}
+.section02_mbbox .set02_slidebox li div p:last-child {
+	margin-bottom:0;
+}
+.section02_mbbox .set02_slidebox li div p span {
+    display: inline-block;
+    margin-right: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    margin-bottom: 2px;
+    border-radius: 8px;
+}
+
+.section02_mbbox .set02_slidebox li:hover {
+    border: 2px solid #860303;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+.section02_mbbox .set02_slidebox li:hover .plus_btn {
+    background-color: #860303;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+
+
+
+
+
+/*section03*/
+
+
+
+
+.section03_content {
+    position: relative;
+    max-width: 100%;
+	overflow:hidden;
+	background-color:#f5f5f5;
+}
+
+.section03_content .section03_mbbox {
+	max-width:1280px; margin:0 auto; padding:130px 0; position: relative;
+    overflow: hidden;
+}
+.section03_mbbox .search_box .icon_tab {margin-bottom:40px; position:relative; overflow:hidden;}
+
+.section03_mbbox .search_box .icon_tab li {
+	width:220px; padding:150px 0 45px; float:left;
+	background-color:#fff;
+	margin-right:45px;
+	border-radius: 13px;
+	text-align: center;
+	font-size:18px;
+	font-family: 'LotteMartDream', sans-serif;
+    color:#6c6c6c;
+	font-weight: bold;
+	background-repeat: no-repeat;
+	background-position: center 45px;
+	border:2px solid #fff;
+	box-sizing: border-box;
+	transition: .5s;
+	-webkit-transition: .5s;
+    cursor: pointer;
+}
+
+.section03_mbbox .search_box .icon_tab li:nth-child(1) {
+    background-image: url("../images/point_icon0301_g.png");
+}
+.section03_mbbox .search_box .icon_tab li:nth-child(2) {
+    background-image: url("../images/point_icon0302_g.png");
+}
+.section03_mbbox .search_box .icon_tab li:nth-child(3) {
+    background-image: url("../images/point_icon0303_g.png");
+}
+.section03_mbbox .search_box .icon_tab li:nth-child(4) {
+    background-image: url("../images/point_icon0304_g.png");
+}
+.section03_mbbox .search_box .icon_tab li:nth-child(5) {
+    background-image: url("../images/point_icon0305_g.png");
+    margin-right: 0;
+}
+
+.section03_mbbox .search_box .icon_tab li:hover {
+    border-color: #860303;
+    color: #860303;
+}
+.section03_mbbox .search_box .icon_tab li:nth-child(1):hover {
+    background-image: url("../images/point_icon0301_r.png");
+}
+.section03_mbbox .search_box .icon_tab li:nth-child(2):hover {
+    background-image: url("../images/point_icon0302_r.png");
+}
+.section03_mbbox .search_box .icon_tab li:nth-child(3):hover {
+    background-image: url("../images/point_icon0303_r.png");
+}
+.section03_mbbox .search_box .icon_tab li:nth-child(4):hover {
+    background-image: url("../images/point_icon0304_r.png");
+}
+.section03_mbbox .search_box .icon_tab li:nth-child(5):hover {
+    background-image: url("../images/point_icon0305_r.png");
+    margin-right: 0;
+}
+
+.section03_mbbox .search_box .icon_tab li.focus {
+    background-color: #860303;
+    border-color: #860303;
+    color: #fff;
+}
+.section03_mbbox .search_box .icon_tab li:nth-child(1).focus {
+    background-image: url("../images/point_icon0301_w.png");
+}
+.section03_mbbox .search_box .icon_tab li:nth-child(2).focus {
+    background-image: url("../images/point_icon0302_w.png");
+}
+.section03_mbbox .search_box .icon_tab li:nth-child(3).focus {
+    background-image: url("../images/point_icon0303_w.png");
+}
+.section03_mbbox .search_box .icon_tab li:nth-child(4).focus {
+    background-image: url("../images/point_icon0304_w.png");
+}
+.section03_mbbox .search_box .icon_tab li:nth-child(5).focus {
+    background-image: url("../images/point_icon0305_w.png");
+}
+
+
+.section03_mbbox .search_box .icon_tab_ct {
+    clear: both;
+    margin-bottom: 40px;
+
+    display:none;/*script 적용시 삭제*/
+}
+.section03_mbbox .search_box .icon_tab_ct.view /*script 적용시 삭제*/ {
+    display:block;
+}
+.section03_mbbox .search_box .icon_tab_ct ul {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.section03_mbbox .search_box .icon_tab_ct ul li {
+    width: 22%;
+    margin-right: 4%;
+    float: left;
+}
+.section03_mbbox .search_box .icon_tab_ct ul li:nth-child(4n+0) {
+    margin-right: 0;
+}
+
+.section03_mbbox .search_box .icon_tab_ct ul li label {
+    width: 100%;
+    display: block;
+    width: 100%;
+    display: block;
+    padding: 15px 0 15px 50px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    background-color: #fff;
+    position: relative;
+    font-size: 15px;
+    transform: skew(-0.03deg);
+}
+
+.round_checkbox label::before {
+    content: "";
+    background-color: transparent;
+    border: 2px solid #6c6c6c;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 22px;
+    left: 12px;
+    position: absolute;
+    top: 10px;
+    width: 22px;
+}
+
+.round_checkbox label:after {
+    content: "";
+    height: 14px;
+    left: 18px;
+    opacity: 0;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 14px;
+    top: 16px;
+    width: 14px;
+}
+
+.round_checkbox input[type="checkbox"] {
+    visibility: hidden;
+}
+
+.section03_mbbox .search_box .icon_tab_ct ul li.round_checkbox input[type="checkbox"]:checked + label {
+    background-color: #860303;
+    color: #fff;
+}
+
+.round_checkbox input[type="checkbox"]:checked + label::before {
+    border-color: #fff;
+}
+
+.round_checkbox input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+
+.section03_mbbox .search_box button {
+    display:none;
+    cursor: pointer;
+    width: 265px;
+    box-sizing: border-box;
+    border: 2px solid #860303;
+    background: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 0;
+    color: #860303;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+.winelist_ct{display:none;  overflow:hidden;}
+
+.section03_mbbox .search_box + .winelist_ct {
+    padding-top: 75px;
+    margin-top: 75px;
+    border-top: 1px solid #dfdfdf;
+}
+.section03_mbbox .search_box + .winelist_ct.view_wlist {
+    display: block;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+.winelist_ct .list_ctt {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 0 15px;
+}
+
+.winelist_ct .list_ctt li:first-child {
+    float: left;
+    max-width: 800px;
+}
+.winelist_ct .list_ctt li:last-child {
+    position: absolute;
+    bottom: 25px;
+    right: 0;
+}
+
+.winelist_ct .list_ctt li:first-child button {
+    font-size: 14px;
+    transform: skew(-0.03deg);
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid #6c6c6c;
+    padding: 3px 30px 3px 10px;
+    background-color: transparent;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    color: #6c6c6c;
+}
+
+.winelist_ct .list_ctt li:first-child button span {
+    display: block;
+    margin-left: 10px;
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.winelist_ct .list_ctt li:first-child button:hover {
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    color: #860303;
+    border: 1px solid #860303;
+}
+
+.winelist_ct .list_ctt li:last-child button {
+    border: 0;
+    background-color: transparent;
+    margin: 0 10px;
+    float: left;
+    cursor: pointer;
+}
+.winelist_ct .list_ctt li:last-child span {
+    display: block;
+    width: 1px;
+    height: 20px;
+    background-color: #6c6c6c;
+    float: left;
+}
+.winelist_ct .list_ctt li:last-child button:first-child {
+    margin-left: 0;
+}
+.winelist_ct .list_ctt li:last-child button:last-child {
+    margin-right: 0;
+}
+
+.winelist_ct .list_ctc {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.winelist_ct .list_ctc .content {
+    width: 49%;
+    margin-right: 2%;
+    float: left;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    padding: 45px 0;
+    box-sizing: border-box;
+    margin-bottom: 2%;
+    position: relative;
+    box-shadow: 5px 5px 10px rgba(0,0,0,10%);
+    cursor: pointer;
+}
+.winelist_ct .list_ctc .content:nth-child(2n+0) {
+    margin-right: 0;
+    box-shadow: -5px 5px 10px rgba(0,0,0,10%);
+}
+
+.winelist_ct .list_ctc .content .wine_img {
+    display: block;
+    float: left;
+    padding: 0 30px 0 50px;
+    width:100px;
+}
+.winelist_ct .list_ctc .content div {
+    float: left;
+    width: 375px;
+    padding: 15px 0;
+}
+.winelist_ct .list_ctc .content div p:nth-child(1) {
+    margin-bottom: 5px;
+    font-size: 12px;
+    transform: skew(-0.03deg);
+}
+.winelist_ct .list_ctc .content div p:nth-child(2) {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'LotteMartDream', sans-serif;
+    margin-bottom: 8px;
+}
+.winelist_ct .list_ctc .content div ul {
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.winelist_ct .list_ctc .content div ul li {
+    float: left;
+    margin-right: 20px;
+    font-size: 12px;
+    transform: skew(-0.03deg);
+    text-transform: capitalize;
+}
+.winelist_ct .list_ctc .content div ul li:first-child span:first-child {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: #860303;
+    margin-right: 8px;
+}
+
+.winelist_ct .list_ctc .content div ul li:last-child {
+    margin-right: 0;
+}
+.winelist_ct .list_ctc .content div ul li:last-child img {
+    display: inline-block;
+    margin-right: 8px;
+    width:20px;
+}
+.winelist_ct .list_ctc .content div p:last-child {
+    clear: both;
+    line-height: 150%;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.winelist_ct .list_ctc .content .view_btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: #e2e2e2;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 25px;
+    color: #fff;
+}
+
+.winelist_ct .list_ctc .content:hover {
+    border: 2px solid #860303;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+
+.winelist_ct .list_ctc .content:hover .view_btn {
+    background-color: #860303;
+}
+
+
+
+
+/*section04*/
+
+.section04_content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 130px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.section04_content .content {
+    width: 1020px;
+    margin: 0 auto;
+}
+.section04_content .content li {
+    width: 240px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.section04_content .content li:nth-child(4n+0) {
+    margin-right: 0;
+}
+.section04_content .content li:nth-child(5),
+.section04_content .content li:nth-child(6),
+.section04_content .content li:nth-child(7),
+.section04_content .content li:nth-child(8) {
+    margin-bottom: 0;
+}
+
+
+/*footer*/
+
+footer {
+    width: 100%;
+    background-color: #860303;
+}
+footer div {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+
+footer div img {
+    display: block;
+    margin: 0 auto 30px;
+}
+footer div ul {
+    width: 270px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+footer div ul li {
+    float: left;
+    width: 20%;
+}
+footer div .work_notion {
+    clear: both;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+
+
+
+
+
+/* wine infor */
+
+.wine_infor_content {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+}
+
+.wine_infor_content.viewmd {
+    display: block;
+}
+
+.wine_box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #fefefe;
+    width: 800px;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.wine_box img {
+    width: 200px;
+    display: block;
+    float: left;
+}
+.wine_box .wine_inf {
+    float: left;
+    padding: 10px 0 0 10px;
+    width: calc(100% - 255px);
+}
+.wine_box .wine_inf .s_tit{
+    font-size:13px;
+    transform: skew(-0.03deg); margin-bottom:6px;
+}
+.wine_box .wine_inf .t_tit{
+    font-size:18px; font-weight: bold;
+    margin-bottom:8px;
+}
+.wine_box .wine_inf .s_txt {
+    position:relative; overflow:hidden;
+    margin-bottom:35px;
+}
+.wine_box .wine_inf .s_txt li {float:left;}
+
+
+.wine_box .wine_inf .s_txt li {
+    float: left;
+    margin-right: 20px;
+    font-size: 12px;
+    
+    transform: skew(-0.03deg);
+    text-transform: capitalize;
+}
+.wine_box .wine_inf .s_txt li:first-child span:first-child {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: #860303;
+    margin-right: 8px;
+}
+
+.wine_box .wine_inf .s_txt li:last-child {
+    margin-right: 0;
+}
+.wine_box .wine_inf .s_txt li:last-child img {
+    width:20px; float:none;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+
+.wine_box .wine_inf .t_txt {
+    clear: both;
+    width: 100%;
+    
+    margin-bottom: 30px;
+}
+.wine_box .wine_inf .t_txt tr td,
+.wine_box .wine_inf .t_txt tr th {
+    padding: 10px 0 10px 10px;
+    text-align: left;
+    border-bottom: 1px solid #fff;
+}
+.wine_box .wine_inf .t_txt tr th {
+    background-color: #ededed;
+    transform: skew(-0.03deg);
+    font-size: 14px;
+}
+.wine_box .wine_inf .t_txt tr td {
+    font-size:13px;
+    transform: skew(-0.03deg);
+}
+
+.wine_box .wine_inf .t_txt tr:nth-child(2) td span,
+.wine_box .wine_inf .t_txt tr:nth-child(3) td span {
+
+    display: block;
+    width: 6px;
+    height: 15px;
+    float: left;
+    margin-right: 3px;
+    background-color: rgba(134,3,3,0.2);
+    border-radius: 3px;
+}
+.wine_box .wine_inf .t_txt tr:nth-child(2) td span:nth-child(2),
+.wine_box .wine_inf .t_txt tr:nth-child(3) td span:nth-child(2) {
+    background-color: rgba(134,3,3,0.4);
+}
+.wine_box .wine_inf .t_txt tr:nth-child(2) td span:nth-child(3),
+.wine_box .wine_inf .t_txt tr:nth-child(3) td span:nth-child(3) {
+    background-color: rgba(134,3,3,0.6);
+}
+
+.wine_box .wine_inf .t_txt tr:nth-child(2) td span:nth-child(4),
+.wine_box .wine_inf .t_txt tr:nth-child(3) td span:nth-child(4) {
+    background-color: rgba(134,3,3,0.8);
+}
+.wine_box .wine_inf .t_txt tr:nth-child(2) td span:nth-child(5),
+.wine_box .wine_inf .t_txt tr:nth-child(3) td span:nth-child(5) {
+    background-color: rgba(134,3,3,1);
+}
+
+.wine_box .wine_inf .w_txt span {
+    font-size: 14px;
+    transform: skew(-0.03deg);
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.wine_box .wine_inf .w_txt p {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+/* Add Animation */
+
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
