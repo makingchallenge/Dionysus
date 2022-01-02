@@ -233,6 +233,7 @@ function setSearchList( checkList ) {
             let list = response['list_data'] // DB에 저장된 데이터 가져오기
 
             for (let i = 0 ; i < list.length ; i++) {
+                let wine_num = list[i]['\ufeffwine_num']
                 let img = list[i]['img']
                 let name_eng = list[i]['name_eng']
                 let name_ko = list[i]['name_ko']
@@ -259,12 +260,24 @@ function setSearchList( checkList ) {
                     case '주정강화':
                         kind_color = 'fortified'
                         break;
+                    case '우리술':
+                        kind_color = 'our_alcohol'
+                        break;
+                    case '사케/청주':
+                        kind_color = 'cheongju'
+                        break;
+                    case '기타':
+                        kind_color = 'etc'
+                        break;
+                    case '고도주':
+                        kind_color = 'godoju'
+                        break;
                     default:
                         break
                 }
 
                 temp_html +=
-                                `<li class="content" onclick="load_wineif()">
+                                `<li class="content" onclick="click_count('${wine_num}')">
                                     <img src="${img}" alt="wine image" class="wine_img">
                                     <div>
                                         <p>${name_eng}</p>
@@ -319,7 +332,31 @@ function wine_info(wine_num1) {
             let Sweetness = information['Sweetness']
             let acidity = information['acidity']
             let body = information['body']
-            let Tannin = information['Tannin']            
+            let Tannin = information['Tannin']
+
+            let temp = ``
+            for (var i = 0; i < Sweetness; i++) {
+                temp += `<span></span>`
+            }
+            let Sweetness_html = temp
+
+            temp = ``
+            for (i = 0; i < acidity; i++) {
+                temp += `<span></span>`
+            }
+            let acidity_html = temp
+
+            temp = ``
+            for (i = 0; i < body; i++) {
+                temp += `<span></span>`
+            }
+            let body_html = temp
+
+            temp = ``
+            for (i = 0; i < Tannin; i++) {
+                temp += `<span></span>`
+            }
+            let Tannin_html = temp
 
             let temp_html_2 = `<div class="wine_box">
                                     <img src="${img}" alt="wine img">
@@ -339,15 +376,15 @@ function wine_info(wine_num1) {
                                             </tr>
                                             <tr>
                                                 <th>당도</th>
-                                                <td>${Sweetness}</td>
+                                                <td>${Sweetness_html}</td>
                                                 <th>타닌</th>
-                                                <td>${Tannin}</td>
+                                                <td>${Tannin_html}</td>
                                             </tr>
                                             <tr>
                                                 <th>산도</th>
-                                                <td>${acidity}</td>
+                                                <td>${acidity_html}</td>
                                                 <th>바디</th>
-                                                <td>${body}</td>
+                                                <td>${body_html}</td>
                                             </tr>
                                             <tr>
                                                 <th>도수</th>

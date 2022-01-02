@@ -113,7 +113,38 @@
     background-color: #83ad60;
     margin-right: 8px;
 }
-
+.our_alcohol{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e00000+0,e00000+50,000be0+50,000be0+100 */ background: rgb(224,0,0); /* Old browsers */ background: -moz-linear-gradient(-45deg, rgba(224,0,0,1) 0%, rgba(224,0,0,1) 50%, rgba(0,11,224,1) 50%, rgba(0,11,224,1) 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(-45deg, rgba(224,0,0,1) 0%,rgba(224,0,0,1) 50%,rgba(0,11,224,1) 50%,rgba(0,11,224,1) 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(135deg, rgba(224,0,0,1) 0%,rgba(224,0,0,1) 50%,rgba(0,11,224,1) 50%,rgba(0,11,224,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e00000', endColorstr='#000be0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    margin-right: 8px;
+}
+.cheongju{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: #a3ebd9;
+    margin-right: 8px;
+}
+.etc{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: #c4c4c4;
+    margin-right: 8px;
+}
+.godoju{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: #ff8a00;
+    margin-right: 8px;
+}
 
 
 
@@ -705,14 +736,14 @@ nav ul li button:hover {
     transform: skew(-0.03deg);
     text-transform: capitalize;
 }
-.winelist_ct .list_ctc .content div ul li:first-child span:first-child {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 8px;
-    background-color: #860303;
-    margin-right: 8px;
-}
+/*.winelist_ct .list_ctc .content div ul li:first-child span:first-child {*/
+/*    display: inline-block;*/
+/*    width: 8px;*/
+/*    height: 8px;*/
+/*    border-radius: 8px;*/
+/*    background-color: #860303;*/
+/*    margin-right: 8px;*/
+/*}*/
 
 .winelist_ct .list_ctc .content div ul li:last-child {
     margin-right: 0;
